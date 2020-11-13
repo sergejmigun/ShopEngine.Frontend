@@ -1,0 +1,23 @@
+﻿@model ShopEngine.Frontend.Models.Layout.CartPopupModel
+
+<div class="toolbar-dropdown cart-dropdown widget-cart hidden-on-mobile">
+    @foreach (var item in @Model.CartItems)
+    {
+        <!-- Entry-->
+        <div class="entry">
+            <div class="entry-thumb"><a href="shop-single.html"><img src="img/@(item.Product.Thumb)" alt="@item.Product.Title"></a></div>
+            <div class="entry-content">
+                <h4 class="entry-title"><a href="shop-single.html">@item.Product.Title</a></h4><span class="entry-meta">@item.ProductsCount x @item.Product.PriceStr</span>
+            </div>
+            <div class="entry-delete"><i class="icon-x"></i></div>
+        </div>
+    }
+    <div class="text-right">
+        <p class="text-gray-dark py-2 mb-0"><span class='text-muted'>Subtotal:</span> &nbsp;@Model.SubtotalStr </p>
+    </div>
+    <div class="d-flex">
+        <div class="pr-2 w-50"><a class="btn btn-secondary btn-sm btn-block mb-0" href="cart.html">Expand Cart</a></div>
+        <div class="pl-2 w-50"><a class="btn btn-primary btn-sm btn-block mb-0" href="checkout.html">Checkout</a></div>
+    </div>
+</div>
+

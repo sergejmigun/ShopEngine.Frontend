@@ -1,0 +1,40 @@
+﻿@model ShopEngine.Frontend.Models.Layout.MenuViewModel 
+
+<!-- Slideable (Mobile) Menu-->
+<nav class="slideable-menu">
+    <ul class="menu" data-initial-height="385">
+        <li class="has-children active">
+            <span><a href="index.html">Home</a><span class="sub-menu-toggle"></span></span>
+        </li>
+        <li class="has-children">
+            <span><a href="shop-categories.html">Shop Categories</a><span class="sub-menu-toggle"></span></span>
+        </li>
+        <li class="has-children">
+            <span><a href="#">Categories</a><span class="sub-menu-toggle"></span></span>
+            <ul class="slideable-submenu">
+                @foreach (var menuItem in Model.PopularCategories)
+                {
+                    <li><a href="@menuItem.Link">@menuItem.Text</a></li>
+                }
+            </ul>
+        </li>
+        <li class="has-children">
+            <span><a href="#">Brands</a><span class="sub-menu-toggle"></span></span>
+            <ul class="slideable-submenu">
+                @foreach (var menuItem in Model.PopularBrands)
+                {
+                    <li><a href="@menuItem.Link">@menuItem.Text</a></li>
+                }
+            </ul>
+        </li>
+        <li class="has-children">
+            <span><a href="#">Pages</a><span class="sub-menu-toggle"></span></span>
+            <ul class="slideable-submenu">
+                @foreach (var menuItem in Model.Pages)
+                {
+                    <li><a href="@menuItem.Link">@menuItem.Text</a></li>
+                }
+            </ul>
+        </li>
+    </ul>
+</nav>

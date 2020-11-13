@@ -1,0 +1,56 @@
+﻿@model ShopEngine.Frontend.Models.Layout.MenuViewModel
+<!-- Main Navigation-->
+<nav class="site-menu">
+    <ul>
+        <li class="has-submenu active">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="has-megamenu">
+            <a href="#">Shop Products</a>
+            <ul class="mega-menu">
+                <li>
+                    <span class="mega-menu-title">Top Categories</span>
+                    <ul class="sub-menu">
+                        @foreach (var menuItem in Model.PopularCategories)
+                        {
+                            <li><a href="@menuItem.Link">@menuItem.Text</a></li>
+                        }
+                    </ul>
+                    <div>
+                        <a href="shop-categories.html">Shop All Categories</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="mega-menu-title">Popular Brands</span>
+                    <ul class="sub-menu">
+                        @foreach (var menuItem in Model.PopularBrands)
+                        {
+                            <li><a href="@menuItem.Link">@menuItem.Text</a></li>
+                        }
+                    </ul>
+                </li>
+                <li>
+                    <span class="mega-menu-title">Store Locator</span>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <ul class="list-icon">
+                                <li> <i class="icon-map-pin text-muted"></i>@Model.AddressLine</li>
+                                <li> <i class="icon-phone text-muted"></i>@Model.Phones</li>
+                                <li class="mb-0"><i class="icon-mail text-muted"></i><a class="navi-link" href="mailto:@Model.Email">@Model.Email</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Info</a>
+            <ul class="sub-menu">
+                @foreach (var menuItem in Model.Pages)
+                {
+                    <li><a href="@menuItem.Link">@menuItem.Text</a></li>
+                }
+            </ul>
+        </li>
+    </ul>
+</nav>
