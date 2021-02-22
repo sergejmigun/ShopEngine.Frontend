@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using ShopEngine.Frontend.Models.Common;
+using ShopEngine.Frontend.Models.Home;
 using ShopEngine.Frontend.Models.Layout;
 
 namespace ShopEngine.Frontend.Controllers
@@ -9,7 +10,7 @@ namespace ShopEngine.Frontend.Controllers
     {
         public ActionResult Index()
         {
-            var vm = new LayoutViewModel { };
+            var vm = new IndexViewModel { };
 
             vm.Header = new HeaderViewModel
             {
@@ -95,7 +96,7 @@ namespace ShopEngine.Frontend.Controllers
                           ShortTitle = "Deu"
                       }
                  },
-                 CategoriesMenu = new CategoriesMenuViewModel
+                CategoriesMenu = new CategoriesMenuViewModel
                  {
                       Items = new List<CategoriesMenuItem>
                       {
@@ -136,7 +137,7 @@ namespace ShopEngine.Frontend.Controllers
                           }
                       }
                  },
-                 Menu = new MenuViewModel
+                Menu = new MenuViewModel
                  {
                       AddressLine = "514 S. Magnolia St. Orlando, FL 32806, USA",
                       Email = "orlando.store@unishop.com",
@@ -160,6 +161,57 @@ namespace ShopEngine.Frontend.Controllers
                           new LinkViewModel { Link= "#", Text = "HTC" }
                       }
                  }
+            };
+
+            vm.Footer = new FooterViewModel
+            {
+                LinkGroup1 = new FooterLinksGroup
+                {
+                    Title = "Shop Departments",
+                    Links = new List<LinkViewModel>
+                      {
+                          new LinkViewModel { Link = "#", Text = "Computers & Accessories" },
+                          new LinkViewModel { Link = "#", Text = "Smartphones & Tablets" },
+                          new LinkViewModel { Link = "#", Text = "TV, Video & Audio" },
+                          new LinkViewModel { Link = "#", Text = "Headphones" },
+                          new LinkViewModel { Link = "#", Text = "Cameras, Photo & Video" }
+                      }
+                },
+                LinkGroup2 = new FooterLinksGroup
+                {
+                    Title = "About Us",
+                    Links = new List<LinkViewModel>
+                      {
+                          new LinkViewModel { Link = "#", Text = "Computers & Accessories" },
+                          new LinkViewModel { Link = "#", Text = "Smartphones & Tablets" },
+                          new LinkViewModel { Link = "#", Text = "TV, Video & Audio" },
+                          new LinkViewModel { Link = "#", Text = "Headphones" },
+                          new LinkViewModel { Link = "#", Text = "Cameras, Photo & Video" }
+                      }
+                },
+                LinkGroup3 = new FooterLinksGroup
+                {
+                    Title = "Account & Shipping Info",
+                    Links = new List<LinkViewModel>
+                      {
+                          new LinkViewModel { Link = "#", Text = "Computers & Accessories" },
+                          new LinkViewModel { Link = "#", Text = "Smartphones & Tablets" },
+                          new LinkViewModel { Link = "#", Text = "TV, Video & Audio" },
+                          new LinkViewModel { Link = "#", Text = "Headphones" },
+                          new LinkViewModel { Link = "#", Text = "Cameras, Photo & Video" }
+                      }
+                }
+            };
+
+            vm.PopularBrands = new List<ImageModel>
+            {
+                new ImageModel { Source = "img/brands/02.png", Alt = "Samsung" }, new ImageModel { Source = "img/brands/03.png", Alt = "Sony" }
+            };
+
+            vm.SliderItems = new List<SliderItemModel>
+            {
+                new SliderItemModel { CustomText = "Buy Now!", Title = "Google Home - Smart Speaker", CustomTextPrice = "359$", Image = "img/hero-slider/logo02.png", Link = new LinkViewModel {  Link = "#", Text = "Go" } },
+                new SliderItemModel { CustomText = "View offers", Title = "Modern Powerful Laptop", CustomTextPrice = "1$", Image = "img/hero-slider/logo03.png", Link = new LinkViewModel {  Link = "#", Text = "Go" } }
             };
 
             return View(vm);

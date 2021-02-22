@@ -145,12 +145,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Common\ImageModel.cs" />
     <Compile Include="Models\Common\LinkViewModel.cs" />
     <Compile Include="Models\Common\ProductShortInfoModel.cs" />
+    <Compile Include="Models\Home\IndexViewModel.cs" />
+    <Compile Include="Models\Home\SliderItemModel.cs" />
     <Compile Include="Models\Layout\CartItemModel.cs" />
     <Compile Include="Models\Layout\CartPopupModel.cs" />
     <Compile Include="Models\Layout\CategoriesMenuViewModel.cs" />
     <Compile Include="Models\Layout\CurrencyModel.cs" />
+    <Compile Include="Models\Layout\FooterLinksGroup.cs" />
     <Compile Include="Models\Layout\LanguageModel.cs" />
     <Compile Include="Models\Layout\MenuViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
