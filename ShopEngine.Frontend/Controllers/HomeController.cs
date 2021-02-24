@@ -14,6 +14,8 @@ namespace ShopEngine.Frontend.Controllers
 
             vm.Header = new HeaderViewModel
             {
+                LogoAlt = "My Tesy Eshop",
+                LogoPath = "img/logo/logo.png",
                 Cart = new CartPopupModel
                 {
                     CartItems = new List<CartItemModel>

@@ -4,6 +4,10 @@ namespace ShopEngine.Frontend.Models.Layout
 {
     public class HeaderViewModel
     {
+        public string LogoPath { get; set; }
+
+        public string LogoAlt { get; set; }
+
         public IEnumerable<CurrencyModel> Currencies { get; set; }
 
         public CurrencyModel CurrentCurrency { get; set; }

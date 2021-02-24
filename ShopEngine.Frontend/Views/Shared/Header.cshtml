@@ -5,7 +5,7 @@
     <!-- Topbar-->
     <div class="topbar d-flex justify-content-between">
         <!-- Logo-->
-        <div class="site-branding d-flex"><a class="site-logo align-self-center" href="index.html"><img src="img/logo/logo.png" alt="Unishop"></a></div>
+        <div class="site-branding d-flex"><a class="site-logo align-self-center" href="index.html"><img src="@Url.Content(Model.LogoPath)" alt="@Model.LogoAlt"></a></div>
         <!-- Search / Categories-->
         <div class="search-box-wrap d-flex">
             <div class="search-box-inner align-self-center">
@@ -20,7 +20,7 @@
                         <span class="input-group-btn">
                             <button type="submit"><i class="icon-search"></i></button>
                         </span>
-                        <input class="form-control" type="search" placeholder="Search for anything">
+                        <input id="searchBar" class="form-control" type="search" placeholder="Search for anything" autocomplete-url="/api/search/search">
                     </form>
                 </div>
             </div>
@@ -34,11 +34,14 @@
             </div>
             <div class="toolbar-item hidden-on-mobile">
                 <a href="#">
-                    <div><i class="flag-icon"><img src="img/flags/@(Model.CurrentLanguage.Code).png" alt="@Model.CurrentLanguage.Title"></i><span class="text-label">@Model.CurrentLanguage.Code / @Model.CurrentCurrency.Code</span></div>
+                    <div>
+                        <i class="flag-icon"><img id="currentLanguageImg" code="@Model.CurrentLanguage.Code" src="@Url.Content(string.Format("~/img/flags/{0}.png", Model.CurrentLanguage.Code))" alt="@Model.CurrentLanguage.Title"></i>
+                        <span class="text-label"><span id="languageLabel">@Model.CurrentLanguage.Code</span> / <span id="currencyLabel">@Model.CurrentCurrency.Code</span> </span>
+                    </div>
                 </a>
                 <ul class="toolbar-dropdown lang-dropdown">
                     <li class="px-3 pt-1 pb-2">
-                        <select class="form-control form-control-sm">
+                        <select class="form-control form-control-sm" id="currenciesSelect">
                             @foreach (var currency in Model.Currencies)
                             {
                                 <option value="@currency.Code">@currency.Sign @currency.Title</option>
@@ -47,7 +50,7 @@
                     </li>
                     @foreach (var language in Model.Languages)
                     {
-                        <li><a href="#"><i class="flag-icon"><img src="img/flags/@(language.Code).png" alt="@language.Title"></i>&nbsp;@language.Title</a></li>
+                        <li><a href="#" class="languageOption"><i class="flag-icon"><img code="@language.Code" src="@Url.Content(string.Format("~/img/flags/{0}.png", language.Code))" alt="@language.Title"></i>&nbsp;@language.Title</a></li>
                     }
                 </ul>
             </div>
