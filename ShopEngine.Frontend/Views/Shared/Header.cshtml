@@ -12,8 +12,7 @@
                 <div class="search-box d-flex">
                     <div class="btn-group categories-btn">
                         <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><i class="icon-menu text-lg"></i>&nbsp;Categories</button>
-                        <div class="dropdown-menu mega-dropdown">
-                           @Html.Partial("CategoriesMenu", Model.CategoriesMenu)
+                        <div class="dropdown-menu" id="categoriesMenu">
                         </div>
                     </div>
                     <form class="input-group" method="get">

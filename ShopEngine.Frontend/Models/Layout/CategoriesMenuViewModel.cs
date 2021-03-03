@@ -4,7 +4,7 @@ namespace ShopEngine.Frontend.Models.Layout
 {
     public class CategoriesMenuViewModel
     {
-        public IEnumerable<CategoriesMenuItem> Items { get; set; }
+        public IEnumerable<CategoriesMenuItem> MainColumn { get; set; }
     }
 
     public class CategoriesMenuItem

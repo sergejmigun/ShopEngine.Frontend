@@ -1,0 +1,464 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2574F603-4B6C-4A30-BFDD-E3BC09EEDFDF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TypeScriptHTMLApp1</RootNamespace>
+    <AssemblyName>TypeScriptHTMLApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\pages\layout\controls\shopCatalogue.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\layout\controls\shopCatalogue.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\services\layoutService.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\common\models\searchRequest.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\home\controllers\layout.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\home\controllers\search.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\home\models\categoriesMenu.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\home\models\categoriesMenuItem.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\controllers\home.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\actionResult.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartItemModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartPopupModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\categoriesMenuItem.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\categoriesMenuViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\currencyModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\footerLinksGroup.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\footerViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\headerViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\imageModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\indexViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iView.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iViewEngine.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\javaScriptResult.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\keyValuePair.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\languageModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\layoutViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\linkViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\menuViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\productShortInfoModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\sliderItemModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\viewResult.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\other\controllers\scripts.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\baseViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\contextDataBaseViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\contextViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\resources\UI.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\resources\UICore.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\shared\shopApp.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\shared\shopApp.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\services\layoutService.ts" />
+    <Content Include="Content\Templates\categoriesMenu.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tsconfig.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\app\pages\layout\templates\notifications.js" />
+    <Content Include="Scripts\app\pages\layout\templates\userInfo.js" />
+    <Content Include="Scripts\app\services\controlHelpers\productRelationsGroupHelper.js" />
+    <Content Include="Scripts\app\services\controlHelpers\specificationDefinitionGroupHelper.js" />
+    <Content Include="Scripts\app\services\controlHelpers\specificationDefinitionHelper.js" />
+    <Content Include="Scripts\core\components\composite\backgroundProcessView.js" />
+    <Content Include="Scripts\core\constants\screenSizes.js" />
+    <Content Include="Scripts\core\lib\objects\event.js" />
+    <Content Include="Scripts\core\lib\objects\mapper.js" />
+    <Content Include="Scripts\core\lib\objects\objectsPathParser.js" />
+    <Content Include="Scripts\core\lib\objects\tagsFormatter.js" />
+    <Content Include="Scripts\core\lib\ui\discussionViewHtmlEditor.js" />
+    <Content Include="Scripts\core\lib\ui\discussionViewTextEditor.js" />
+    <Content Include="Scripts\core\services\localization\localizationService.js" />
+    <Content Include="Scripts\core\shared\context.js" />
+    <Content Include="Scripts\core\shared\globalEvents.js" />
+    <Content Include="Scripts\core\shared\systemUrls.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\pages\layout\main.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\layout\partials\mainNavigation.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\layout\partials\mainNavigation.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\pageContext.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\controlHelpers\imageUploaderHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\controlHelpers\imageUploaderHelper.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\controlHelpers\selectListValuesCompleterHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\controlHelpers\selectListValuesCompleterHelper.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\globalConfiguration.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\globalConfiguration.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\helpers\currencyHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\helpers\currencyHelper.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\helpers\productsFilterConditionsHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\helpers\productsFilterConditionsHelper.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\templatesHtmlProvider.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\templatesHtmlProvider.ts" />
+    <TypeScriptCompile Include="Scripts\core\app.ts" />
+    <TypeScriptCompile Include="Scripts\core\common\textValue.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\contentVariable.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\contentVariable.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\contentVariablesView.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\contentVariablesView.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\errorViewer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\errorViewer.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\gridView.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\gridView.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\wrapperWithButtons.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\composite\wrapperWithButtons.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\accordion.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\accordion.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\audioplayer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\audioplayer.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\backgroundProcessView.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\backgroundProcessView.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\barChart.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\barChart.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\buttons.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\buttons.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\carousel.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\carousel.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\chatView.def.ts">
+      <DependentUpon>chatView.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\core\components\controls\chatView.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\chatViewUiContext.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\chatViewUiContext.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\conditionsBuilder.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\conditionsBuilder.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\discussionview.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\discussionview.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\discussionViewUiContext.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\discussionViewUiContext.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\dropdownmenu.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\dropdownmenu.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\emotionspicker.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\emotionspicker.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\filebrowser.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\filebrowser.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\filesViewer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\filesViewer.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\fixedArea.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\fixedArea.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\form.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\form.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\grid.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\grid.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\imageeditor.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\imageeditor.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\imageGallery.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\imageGallery.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\lineChart.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\lineChart.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\loader.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\loader.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\modals.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\modals.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\notifier.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\notifier.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\pagination.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\pagination.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\pieChart.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\pieChart.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\popover.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\popover.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\progressbar.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\progressbar.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\scrollView.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\scrollView.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\scrollViewUiContext.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\scrollViewUiContext.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\searchBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\searchBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\tabs.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\tabs.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\tagcloud.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\tagcloud.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\textRotator.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\textRotator.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\thumb.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\thumb.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\treeview.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\treeview.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\truncatedText.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\truncatedText.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\validationSummary.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\validationSummary.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\videoplayer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\videoplayer.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\autoCompleter.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\autoCompleter.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\captcha.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\captcha.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\chainedSelectLists.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\chainedSelectLists.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\checkBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\checkBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\codeEditor.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\codeEditor.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\colorPicker.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\colorPicker.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\dateTimePicker.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\dateTimePicker.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\dateTimeRangeBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\dateTimeRangeBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\fileUploader.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\fileUploader.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\finder.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\finder.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\gridEntityFinder.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\gridEntityFinder.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\htmlEditor.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\htmlEditor.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\imageUploader.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\imageUploader.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\inputsList.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\inputsList.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\inputsListUiContext.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\inputsListUiContext.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\inputsSet.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\inputsSet.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\itemsSwitcher.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\itemsSwitcher.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\localizedInput.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\localizedInput.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\mapEditor.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\mapEditor.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\maskedBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\maskedBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\multiLineTextBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\multiLineTextBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\multiSelectList.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\multiSelectList.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\numericBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\numericBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\passwordBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\passwordBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\radioList.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\radioList.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\rangeNumericBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\rangeNumericBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\rangeSlider.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\rangeSlider.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\ratingBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\ratingBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\singleSelectList.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\singleSelectList.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\tagsEntityFinder.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\tagsEntityFinder.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\tagsInput.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\tagsInput.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\textBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\textBox.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\timePicker.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\timePicker.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\typedInput.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\typedInput.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\variableInput.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\variableInput.ts" />
+    <TypeScriptCompile Include="Scripts\core\constants\formActionStatus.ts" />
+    <TypeScriptCompile Include="Scripts\core\enums\components.ts" />
+    <TypeScriptCompile Include="Scripts\core\enums\gridView.ts" />
+    <TypeScriptCompile Include="Scripts\core\enums\services.ts" />
+    <TypeScriptCompile Include="Scripts\core\enums\ui.ts" />
+    <TypeScriptCompile Include="Scripts\core\lib\objects\enumerable.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Collections.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Collections.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Common.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Components.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Components.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Constants.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\JQuery.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Lib.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Pages.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Promise.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Services.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Services.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Shared.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\UI.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\UI.ts" />
+    <TypeScriptCompile Include="Scripts\core\modules\Utils.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\handlers\errorHandler.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\handlers\errorHandler.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\containerHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\containerHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\formInitHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\formInitHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\formSubmissionHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\formSubmissionHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\gridHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\gridHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\modalHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\modalHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\pageFormHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\pageFormHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\pageUrlHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\pageUrlHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\viewHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\helpers\viewHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\componentInitializationHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\componentInitializationHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\controlOptionsPrototypes.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\eventInitializer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\eventsInitializer.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\gridInitializer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\gridInitializer.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\gridViewInitializer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\gridViewInitializer.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\tabsInitializer.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\initialization\tabsInitializer.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\localization\localizationManagementService.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\localization\localizationManagementService.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\storage\localStorageService.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\storage\localStorageService.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\chartHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\chartHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\clipboardService.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\clipboardService.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\confirmationHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\confirmationHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\controlsChangesDetector.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\controlsChangesDetector.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\inputStateManager.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\inputStateManager.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\notifierHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\ui\notifierHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidationHandlers\defaultInputValidationHandler.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidationHandlers\defaultInputValidationHandler.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidationHandlers\inputsListValidationHandler.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidationHandlers\inputsListValidationHandler.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidationHandlers\inputsSetValidationHandler.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidationHandlers\inputsSetValidationHandler.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidators\inputslist.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidators\inputslist.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidators\inputsSet.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidators\inputsSet.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidators\localizedInput.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\controlValidators\localizedInput.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\helpers\validatonHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\helpers\validatonHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\services\controlValidation.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\services\controlValidation.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\validators\email.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\validators\email.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\validators\passwordStrength.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\validators\passwordStrength.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\validators\required.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\validation\validators\required.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\apiControllers.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\apiService.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\apiService.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\controllersHelper.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\controllersHelper.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\mvcControllers.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\webService.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\services\webServer\webService.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\jquery\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\jquery\JQueryStatic.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\jquery\legacy.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\jquery\misc.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\jquery\sizzle.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\colors.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\dates.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\dom.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\dom.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\math.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\objects.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\objects.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\strings.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\strings.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\urls.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\utils\urls.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Scripts\app\server\api\common\controllers\" />
+    <Folder Include="Scripts\app\server\api\other\controllers\" />
+    <Folder Include="Scripts\app\server\api\other\models\" />
+    <Folder Include="Scripts\app\server\mvc\home\controllers\" />
+    <Folder Include="Scripts\app\server\mvc\home\models\" />
+    <Folder Include="Scripts\core\services\validation\consts\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10202</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10202/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)Content" "$(ProjectDir)\..\ShopEngine.Frontend\Content" /e /y /i /r</PostBuildEvent>
+  </PropertyGroup>
+</Project>

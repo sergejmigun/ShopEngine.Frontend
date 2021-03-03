@@ -3911,11 +3911,6 @@ a.card {
   content: '\e931';
 }
 
-.mega-dropdown {
-  width: 700px;
-  padding: 30px 30px 0;
-}
-
 .toolbar-dropdown {
   right: -1px;
   left: auto;

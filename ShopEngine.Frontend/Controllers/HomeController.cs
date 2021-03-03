@@ -98,47 +98,6 @@ namespace ShopEngine.Frontend.Controllers
                           ShortTitle = "Deu"
                       }
                  },
-                CategoriesMenu = new CategoriesMenuViewModel
-                 {
-                      Items = new List<CategoriesMenuItem>
-                      {
-                          new CategoriesMenuItem
-                          {
-                               Image = "img/shop/header-categories/01.jpg",
-                               Title = "Computers &amp; Accessories"
-                          },
-                          new CategoriesMenuItem
-                          {
-                               Image = "img/shop/header-categories/02.jpg",
-                               Title = "Computers &amp; Accessories2"
-                          },
-                          new CategoriesMenuItem
-                          {
-                               Image = "img/shop/header-categories/03.jpg",
-                               Title = "Computers &amp; Accessories3"
-                          },
-                          new CategoriesMenuItem
-                          {
-                               Image = "img/shop/header-categories/04.jpg",
-                               Title = "Computers &amp; Accessories4"
-                          },
-                          new CategoriesMenuItem
-                          {
-                               Image = "img/shop/header-categories/05.jpg",
-                               Title = "Computers &amp; Accessories5"
-                          },
-                          new CategoriesMenuItem
-                          {
-                               Image = "img/shop/header-categories/06.jpg",
-                               Title = "Computers &amp; Accessories6"
-                          },
-                          new CategoriesMenuItem
-                          {
-                               Image = "img/shop/header-categories/07.jpg",
-                               Title = "Computers &amp; Accessories7"
-                          }
-                      }
-                 },
                 Menu = new MenuViewModel
                  {
                       AddressLine = "514 S. Magnolia St. Orlando, FL 32806, USA",
