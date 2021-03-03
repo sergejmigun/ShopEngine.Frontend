@@ -43,4 +43,5 @@ interface ICollections {
     groupBy(array, keySelector): any[];
     merge(array1, array2): any;
     mergeObjectArrays(array1, array2): any
+    hasItems(array: any[]): boolean;
 }

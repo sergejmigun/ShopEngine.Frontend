@@ -323,6 +323,9 @@
                 });
 
                 return result;
+            },
+            hasItems: function (arr) {
+                return arr && arr.length > 0;
             }
         } as ICollections,
         initComponent: function (component) {

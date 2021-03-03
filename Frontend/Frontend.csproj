@@ -99,6 +99,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="tsconfig.json" />
+    <Content Include="Scripts\core\typings\vue\tsconfig.json" />
+    <Content Include="Scripts\core\typings\vue\typings.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -408,6 +410,12 @@
     <TypeScriptCompile Include="Scripts\core\typings\jquery\legacy.d.ts" />
     <TypeScriptCompile Include="Scripts\core\typings\jquery\misc.d.ts" />
     <TypeScriptCompile Include="Scripts\core\typings\jquery\sizzle.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\vue\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\vue\options.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\vue\plugin.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\vue\umd.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\vue\vnode.d.ts" />
+    <TypeScriptCompile Include="Scripts\core\typings\vue\vue.d.ts" />
     <TypeScriptCompile Include="Scripts\core\utils\colors.ts" />
     <TypeScriptCompile Include="Scripts\core\utils\dates.ts" />
     <TypeScriptCompile Include="Scripts\core\utils\dom.def.ts" />

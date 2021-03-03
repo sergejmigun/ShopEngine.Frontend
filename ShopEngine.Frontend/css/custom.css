@@ -42,7 +42,7 @@
                 color: #505050;
             }
 
-            .categories-menu ul li:hover {
+            .categories-menu ul li:hover, .categories-menu ul li.focused {
                 background-color: #fff6e3;
             }
 

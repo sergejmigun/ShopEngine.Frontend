@@ -1,84 +1,72 @@
 app.registerComponent('shopCatalogue', 'UI', [
     'Promise',
-    'Utils.strings',
+    'Collections',
     'Services.templatesHtmlProvider',
-    function (promise, strings, templatesHtmlProvider) {
+    function (promise, colections, templatesHtmlProvider) {
         'use strict';
         return {
             init: function (container, initData) {
-                var $html;
-                var topItems = [];
-                function showSubItems(item) {
-                    var columns = [{
-                            $col: $html.find('.itemsColumn1'),
-                            count: 0
-                        }, {
-                            $col: $html.find('.itemsColumn2'),
-                            count: 0
-                        }, {
-                            $col: $html.find('.itemsColumn3'),
-                            count: 0
-                        }];
+                var $html = $('<div />');
+                var viewModel;
+                function setSubItems(item) {
+                    var columns = [viewModel.subItems1, viewModel.subItems2, viewModel.subItems3];
                     function getColumn() {
                         return columns.sort(function (a, b) {
-                            return a.count - b.count;
+                            return a.length - b.length;
                         })[0];
                     }
+                    columns.forEach(function (arr) {
+                        colections.removeAll(arr);
+                    });
                     item.subItems.forEach(function (subItem) {
                         var column = getColumn();
-                        var $list = $('<ul />');
-                        var $subitem = $('<li><strong><a></a></strong></li>');
-                        $list.append($subitem);
-                        $subitem.find('a').text(subItem.title).attr('href', subItem.url);
-                        column.$col.append($list);
-                        column.count += 1;
-                        if (subItem.subItems) {
-                            column.count += subItem.subItems.length;
-                            subItem.subItems.forEach(function (subsubItem) {
-                                var $subsubitem = $('<li><a></a></li>');
-                                $subsubitem.find('a').text(subsubItem.title).attr('href', subsubItem.url);
-                                $list.append($subsubitem);
-                            });
-                        }
+                        column.push(subItem);
                     });
                 }
-                function addTopItem(item) {
-                    var $topItemsList = $html.find('.topItemsList');
-                    var $item = $('<li><span class="category-image img"></span><a></a><i class="nav fas fa-chevron-right"></i></li>');
-                    $item.find('.img').css('background-image', strings.format('url({0})', item.iconUrl));
-                    $item.find('a').text(item.title).attr('href', item.url);
-                    $topItemsList.append($item);
-                    var topItem = {
-                        item: item,
-                        $el: $item,
-                        focus: function () {
-                            $topItemsList.find('.focused').removeClass('focused');
-                            $item.addClass('focused');
-                            $html.find('.itemsColumn').html('');
-                            showSubItems(item);
-                        }
+                function getItems(subItems) {
+                    if (!colections.hasItems(subItems)) {
+                        return;
+                    }
+                    return colections.from(subItems).select(function (item) {
+                        return {
+                            title: item.title,
+                            url: item.url,
+                            iconUrl: item.iconUrl,
+                            subItems: getItems(item.subItems)
+                        };
+                    }).toArray();
+                }
+                function getVueData() {
+                    viewModel = {
+                        items: getItems(initData.menu.topItems),
+                        subItems1: [],
+                        subItems2: [],
+                        subItems3: [],
+                        focusedItem: null
                     };
-                    topItems.push(topItem);
-                    return topItem;
+                    viewModel.focusedItem = viewModel.items[0];
+                    setSubItems(viewModel.focusedItem);
+                    return viewModel;
                 }
-                function initTopCategories() {
-                    initData.menu.topItems.forEach(function (item, i) {
-                        var topItem = addTopItem(item);
-                        if (i == 0) {
-                            topItem.focus();
+                function init(template, success) {
+                    var vm = new Vue({
+                        data: getVueData(),
+                        template: template,
+                        methods: {
+                            onItemHover: function (item) {
+                                viewModel.focusedItem = item;
+                                setSubItems(item);
+                            }
                         }
                     });
-                }
-                function init(success) {
                     container.setContent($html);
-                    initTopCategories();
+                    vm.$mount($html[0]);
                     success();
                 }
                 templatesHtmlProvider.init().getHtml(['categoriesMenu']).then(function (obj) {
-                    $html = $(obj['categoriesMenu']);
                     app.ignoreParams(initData);
                     return promise.create(function (success) {
-                        init(success);
+                        init(obj['categoriesMenu'], success);
                     });
                 });
             }

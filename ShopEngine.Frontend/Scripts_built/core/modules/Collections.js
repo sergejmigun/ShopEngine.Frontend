@@ -278,6 +278,9 @@ app.registerModule('Collections', ['$', 'Lib.objects.enumerable', function ($, e
                         }
                     });
                     return result;
+                },
+                hasItems: function (arr) {
+                    return arr && arr.length > 0;
                 }
             },
             initComponent: function (component) {

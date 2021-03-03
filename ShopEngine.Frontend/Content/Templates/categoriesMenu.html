@@ -2,25 +2,31 @@
     <div class="row">
         <div class="col-md-4">
             <ul class="topItemsList">
-                
+                <li v-for="item in items" v-on:mouseover="onItemHover(item)" v-bind:class="{ focused: item === focusedItem }">
+                    <span class="category-image" v-bind:style="{ backgroundImage: 'url(' + item.iconUrl + ')' }"></span>
+                    <a>{{item.title}}</a>
+                    <i class="nav fas fa-chevron-right"></i>
+                </li>
             </ul>
         </div>
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-4 itemsColumn itemsColumn1">
-                    <ul>
-                        <li><a><strong>Смартфоны</strong></a></li>
-                        <li><a>Смартфоны</a></li>
+                <div class="col-md-4">
+                    <ul v-for="subItem in subItems1">
+                        <li><a><strong>{{subItem.title}}</strong></a></li>
+                        <li v-for="subItem2 in subItem.subItems"><a>{{subItem2.title}}</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 itemsColumn itemsColumn2">
-                    <ul>
+                <div class="col-md-4">
+                    <ul v-for="subItem in subItems2">
+                        <li><a><strong>{{subItem.title}}</strong></a></li>
+                        <li v-for="subItem2 in subItem.subItems"><a>{{subItem2.title}}</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 itemsColumn itemsColumn3">
-                    <ul>
-                    </ul>
-                    <ul>
+                <div class="col-md-4">
+                    <ul v-for="subItem in subItems3">
+                        <li><a><strong>{{subItem.title}}</strong></a></li>
+                        <li v-for="subItem2 in subItem.subItems"><a>{{subItem2.title}}</a></li>
                     </ul>
                 </div>
             </div>
