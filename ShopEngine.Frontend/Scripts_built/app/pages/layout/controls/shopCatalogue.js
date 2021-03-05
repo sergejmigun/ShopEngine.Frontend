@@ -6,6 +6,7 @@ app.registerComponent('shopCatalogue', 'UI', [
         'use strict';
         return {
             init: function (container, initData) {
+                var control = {};
                 var $html = $('<div />');
                 var viewModel;
                 function setSubItems(item) {
@@ -61,9 +62,9 @@ app.registerComponent('shopCatalogue', 'UI', [
                     });
                     container.setContent($html);
                     vm.$mount($html[0]);
-                    success();
+                    success(control);
                 }
-                templatesHtmlProvider.init().getHtml(['categoriesMenu']).then(function (obj) {
+                templatesHtmlProvider.init('layout').getHtml(['categoriesMenu']).then(function (obj) {
                     app.ignoreParams(initData);
                     return promise.create(function (success) {
                         init(obj['categoriesMenu'], success);

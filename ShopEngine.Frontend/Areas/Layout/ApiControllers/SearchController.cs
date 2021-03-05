@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using ShopEngine.Frontend.ApiModels;
 
-namespace ShopEngine.Frontend.Areas.Home.ApiControllers
+namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
 {
     public class SearchController : ApiController
     {

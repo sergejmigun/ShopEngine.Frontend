@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using ShopEngine.Frontend.ApiModels;
-using ShopEngine.Frontend.Areas.Home.Models;
+using ShopEngine.Frontend.Areas.Layout.Models;
 
-namespace ShopEngine.Frontend.Areas.Home.ApiControllers
+namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
 {
     public class LayoutController : ApiController
     {

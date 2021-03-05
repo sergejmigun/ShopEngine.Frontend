@@ -1,22 +1,22 @@
 ﻿using System.Web.Mvc;
 
-namespace ShopEngine.Frontend.Areas.Home
+namespace ShopEngine.Frontend.Areas.Features
 {
-    public class HomeAreaRegistration : AreaRegistration
+    public class FeaturesAreaRegistration : AreaRegistration
     {
         public override string AreaName
         {
             get
             {
-                return "Home";
+                return "Features";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "Home_default",
-                "Home/{controller}/{action}/{id}",
+                "Features_default",
+                "Features/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional });
         }
     }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ShopEngine.Frontend.Areas.Home.Models
+namespace ShopEngine.Frontend.Areas.Layout.Models
 {
     public class CategoriesMenuItem
     {

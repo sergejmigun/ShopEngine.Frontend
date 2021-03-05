@@ -9,6 +9,7 @@
 
         return {
             init: function (container, initData) {
+                var control: UI.IShopCatalogue = {};
                 var $html = $('<div />');
                 var viewModel: UI.ICategoriesMenuViewModel;
 
@@ -77,10 +78,10 @@
                     container.setContent($html);
                     vm.$mount($html[0]);
 
-                    success();
+                    success(control);
                 }
 
-                templatesHtmlProvider.init().getHtml(['categoriesMenu']).then(function (obj) {
+                templatesHtmlProvider.init('layout').getHtml(['categoriesMenu']).then(function (obj) {
                     app.ignoreParams(initData);
                     return promise.create(function (success) {
                         init(obj['categoriesMenu'], success);

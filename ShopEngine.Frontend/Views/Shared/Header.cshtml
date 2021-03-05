@@ -25,54 +25,7 @@
             </div>
         </div>
         <!-- Toolbar-->
-        <div class="toolbar d-flex">
-            <div class="toolbar-item visible-on-mobile mobile-menu-toggle">
-                <a href="#">
-                    <div><i class="icon-menu"></i><span class="text-label">Menu</span></div>
-                </a>
-            </div>
-            <div class="toolbar-item hidden-on-mobile">
-                <a href="#">
-                    <div>
-                        <i class="flag-icon"><img id="currentLanguageImg" code="@Model.CurrentLanguage.Code" src="@Url.Content(string.Format("~/img/flags/{0}.png", Model.CurrentLanguage.Code))" alt="@Model.CurrentLanguage.Title"></i>
-                        <span class="text-label"><span id="languageLabel">@Model.CurrentLanguage.Code</span> / <span id="currencyLabel">@Model.CurrentCurrency.Code</span> </span>
-                    </div>
-                </a>
-                <ul class="toolbar-dropdown lang-dropdown">
-                    <li class="px-3 pt-1 pb-2">
-                        <select class="form-control form-control-sm" id="currenciesSelect">
-                            @foreach (var currency in Model.Currencies)
-                            {
-                                <option value="@currency.Code">@currency.Sign @currency.Title</option>
-                            }
-                        </select>
-                    </li>
-                    @foreach (var language in Model.Languages)
-                    {
-                        <li><a href="#" class="languageOption"><i class="flag-icon"><img code="@language.Code" src="@Url.Content(string.Format("~/img/flags/{0}.png", language.Code))" alt="@language.Title"></i>&nbsp;@language.Title</a></li>
-                    }
-                </ul>
-            </div>
-            <div class="toolbar-item hidden-on-mobile">
-                <a href="product-comparison.html">
-                    <div><span class="compare-icon"><i class="icon-repeat"></i><span class="count-label">@Model.ComparedItemsCount</span></span><span class="text-label">Compare</span></div>
-                </a>
-            </div>
-            <div class="toolbar-item hidden-on-mobile">
-                <a href="account-login.html">
-                    <div><i class="icon-user"></i><span class="text-label">Sign In / Up</span></div>
-                </a>
-                <div class="toolbar-dropdown text-center px-3">
-                    <p class="text-xs mb-3 pt-2">Sign in to your account or register new one to have full control over your orders, receive bonuses and more.</p><a class="btn btn-primary btn-sm btn-block" href="account-login.html">Sign In</a>
-                    <p class="text-xs text-muted mb-2">New customer?&nbsp;<a href="account-login.html">Register</a></p>
-                </div>
-            </div>
-            <div class="toolbar-item">
-                <a href="cart.html">
-                    <div><span class="cart-icon"><i class="icon-shopping-cart"></i><span class="count-label">@Model.CartItemsCount   </span></span><span class="text-label">Cart</span></div>
-                </a>
-                @Html.Partial("CartPopup", Model.Cart)
-            </div>
+        <div class="toolbar d-flex" id="layoutToolbar">
         </div>
         <!-- Mobile Menu-->
         <div class="mobile-menu">

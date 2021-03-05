@@ -182,16 +182,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Home\ApiControllers\LayoutController.cs" />
-    <Compile Include="Areas\Home\ApiControllers\SearchController.cs" />
+    <Compile Include="Areas\Auth\ApiControllers\RegistrationController.cs" />
+    <Compile Include="Areas\Auth\ApiControllers\AccountController.cs" />
+    <Compile Include="Areas\Auth\ApiControllers\AuthController.cs" />
+    <Compile Include="Areas\Auth\AuthAreaRegistration.cs" />
+    <Compile Include="Areas\Auth\Models\AccountDetails.cs" />
+    <Compile Include="Areas\Cart\ApiControllers\CartController.cs" />
+    <Compile Include="Areas\Cart\CartAreaRegistration.cs" />
+    <Compile Include="Areas\Features\FeaturesAreaRegistration.cs" />
+    <Compile Include="Areas\Layout\ApiControllers\LayoutController.cs" />
+    <Compile Include="Areas\Features\ApiControllers\CompareListController.cs" />
+    <Compile Include="Areas\Layout\ApiControllers\SearchController.cs" />
     <Compile Include="ApiModels\SearchRequest.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\Home\HomeAreaRegistration.cs" />
-    <Compile Include="Areas\Home\Models\CategoriesMenu.cs" />
-    <Compile Include="Areas\Home\Models\CategoriesMenuItem.cs" />
+    <Compile Include="Areas\Layout\LayoutAreaRegistration.cs" />
+    <Compile Include="Areas\Layout\Models\CategoriesMenu.cs" />
+    <Compile Include="Areas\Layout\Models\CategoriesMenuItem.cs" />
     <Compile Include="Areas\OtherAreaRegistration.cs" />
     <Compile Include="Areas\Other\Controllers\ScriptsController.cs" />
     <Compile Include="Areas\Other\Models\BaseViewModel.cs" />
@@ -587,6 +596,8 @@
   <ItemGroup>
     <Folder Include="ApiControllers\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Cart\Models\" />
+    <Folder Include="Areas\Features\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
