@@ -73,11 +73,16 @@
       <DependentUpon>layoutData.ts</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\app\pages\shared\layoutData.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\account.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\cart.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\registration.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\cart\controllers\cart.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\common\models\searchRequest.def.ts" />
-    <TypeScriptCompile Include="Scripts\app\server\api\home\controllers\layout.def.ts" />
-    <TypeScriptCompile Include="Scripts\app\server\api\home\controllers\search.def.ts" />
-    <TypeScriptCompile Include="Scripts\app\server\api\home\models\categoriesMenu.def.ts" />
-    <TypeScriptCompile Include="Scripts\app\server\api\home\models\categoriesMenuItem.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\features\controllers\compareList.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\layout\controllers\layout.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\layout\controllers\search.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\layout\models\categoriesMenu.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\layout\models\categoriesMenuItem.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\controllers\home.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\actionResult.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartItemModel.def.ts" />
@@ -450,11 +455,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="Scripts\app\server\api\auth\models\" />
+    <Folder Include="Scripts\app\server\api\cart\models\" />
     <Folder Include="Scripts\app\server\api\common\controllers\" />
+    <Folder Include="Scripts\app\server\api\features\models\" />
     <Folder Include="Scripts\app\server\api\other\controllers\" />
     <Folder Include="Scripts\app\server\api\other\models\" />
-    <Folder Include="Scripts\app\server\mvc\home\controllers\" />
-    <Folder Include="Scripts\app\server\mvc\home\models\" />
+    <Folder Include="Scripts\app\server\mvc\auth\controllers\" />
+    <Folder Include="Scripts\app\server\mvc\auth\models\" />
+    <Folder Include="Scripts\app\server\mvc\cart\controllers\" />
+    <Folder Include="Scripts\app\server\mvc\cart\models\" />
+    <Folder Include="Scripts\app\server\mvc\features\controllers\" />
+    <Folder Include="Scripts\app\server\mvc\features\models\" />
+    <Folder Include="Scripts\app\server\mvc\layout\controllers\" />
+    <Folder Include="Scripts\app\server\mvc\layout\models\" />
     <Folder Include="Scripts\core\services\validation\consts\" />
   </ItemGroup>
   <PropertyGroup>

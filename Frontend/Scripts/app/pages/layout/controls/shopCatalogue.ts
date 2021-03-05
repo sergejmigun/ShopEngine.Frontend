@@ -33,7 +33,7 @@
                     });
                 }
 
-                function getItems(subItems: Api.Home.Models.ICategoriesMenuItem[]) {
+                function getItems(subItems: Api.Layout.Models.ICategoriesMenuItem[]) {
                     if (!colections.hasItems(subItems)) {
                         return;
                     }
