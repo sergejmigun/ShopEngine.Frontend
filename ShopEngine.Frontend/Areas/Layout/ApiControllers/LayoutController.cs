@@ -7,6 +7,9 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
 {
     public class LayoutController : ApiController
     {
+        public static string CurrentLanguageCode;
+        public static string CurrentCurrencyCode;
+
         [HttpGet]
         public CategoriesMenu GetCategoriesMenu()
         {
@@ -516,6 +519,18 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                      }
                  }
             };
+        }
+
+        [HttpPost]
+        public void SetLanguage([FromBody]string languageCode)
+        {
+            CurrentLanguageCode = languageCode;
+        }
+
+        [HttpPost]
+        public void SetCurrency([FromBody]string currencyCode)
+        {
+            CurrentCurrencyCode = currencyCode;
         }
     }
 }

@@ -1,47 +1,61 @@
 app.registerComponent('layoutBar', 'UI', [
     'Promise',
     'Services.templatesHtmlProvider',
-    function (promise, templatesHtmlProvider) {
+    'Services.layoutService',
+    'Services.compareListService',
+    'Services.cartService',
+    function (promise, templatesHtmlProvider, layoutService, compareListService, cartService) {
         'use strict';
         return {
             init: function (container, initData) {
                 var $html = $('<div />');
-                var control = {
-                    addToCompareList: function (productId) {
-                        app.ignoreParams(productId);
-                    },
-                    removeFromCompareList: function (productId) {
-                        app.ignoreParams(productId);
-                    },
-                    setLanguage: function (code) {
-                        app.ignoreParams(code);
-                    },
-                    setCurrency: function (code) {
-                        app.ignoreParams(code);
-                    },
-                    addToCart: function (productId, count) {
-                        app.ignoreParams(productId);
-                        app.ignoreParams(count);
-                    },
-                    removeFromCart: function (productId, count) {
-                        app.ignoreParams(productId);
-                        app.ignoreParams(count);
-                    },
-                    updateCartItem: function (product) {
-                        app.ignoreParams(product);
-                    }
-                };
-                function init(template, success) {
+                var control = {};
+                function initModel(comparedItemsCount, cart, template) {
+                    var model = {
+                        cartItemsCount: cart.cartItems.length,
+                        comparedItemsCount: comparedItemsCount,
+                        languages: initData.languages,
+                        currencies: initData.currencies,
+                        currentLanguage: initData.currentLanguage,
+                        currentCurrency: initData.currentCurrency,
+                        cart: cart
+                    };
                     var vm = new Vue({
-                        data: initData,
+                        data: model,
                         template: template,
-                        methods: {}
+                        methods: {
+                            onSetCurrency: function () {
+                                layoutService.setCurrency(model.currentCurrency.code);
+                            },
+                            onSetLanguage: function (code) {
+                                model.currentLanguage.code = code;
+                                layoutService.setLanguage(model.currentLanguage.code);
+                            },
+                            onRemoveCartItem: function () {
+                                cartService.removeItem(1);
+                            }
+                        }
+                    });
+                    cartService.onChange(function (cart) {
+                        model.cart = cart;
+                    });
+                    compareListService.onChange(function (count) {
+                        model.comparedItemsCount = count;
                     });
                     container.setContent($html);
                     vm.$mount($html[0]);
-                    success(control);
+                }
+                function init(template, success) {
+                    promise.all([compareListService.getItemsCount(),
+                        cartService.getCart()])
+                        .then(function (res) {
+                        initModel(res[0], res[1], template);
+                        success(control);
+                        return res;
+                    });
                 }
                 templatesHtmlProvider.init('layout').getHtml(['layoutBar']).then(function (obj) {
+                    app.ignoreParams(initData);
                     return promise.create(function (success) {
                         init(obj['layoutBar'], success);
                     });

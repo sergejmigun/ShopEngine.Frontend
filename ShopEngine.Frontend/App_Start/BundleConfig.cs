@@ -71,7 +71,8 @@ namespace ShopEngine.Frontend
         {
             public IEnumerable<BundleFile> OrderFiles(BundleContext context, IEnumerable<BundleFile> files)
             {
-                string appJsFileName = "/scripts_built/core/app.js";
+                string basePath = "/scripts_built/core";
+                string appJsFileName = basePath + "/app.js";
                 var appJs = files.FirstOrDefault(x => x.VirtualFile.VirtualPath.ToLower() == appJsFileName);
 
                 if (appJs != null)
@@ -85,7 +86,22 @@ namespace ShopEngine.Frontend
                     return path != appJsFileName && !path.Contains(".def.");
                 });
 
+                var otherFiles = new List<BundleFile>();
+
                 foreach (var file in files)
+                {
+                    var path = file.VirtualFile.VirtualPath.ToLower();
+                    if ( path.StartsWith(basePath + "/modules"))
+                    {
+                        yield return file;
+                    }
+                    else
+                    {
+                        otherFiles.Add(file);
+                    }
+                }
+
+                foreach (var file in otherFiles)
                 {
                     yield return file;
                 }

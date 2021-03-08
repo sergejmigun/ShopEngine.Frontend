@@ -11,6 +11,12 @@ app.registerComponent('layoutService', 'Services', [
             },
             getCategoriesMenu: function () {
                 return layoutController.getCategoriesMenu().send();
+            },
+            setCurrency: function (currencyCode) {
+                return layoutController.setCurrency(currencyCode).send();
+            },
+            setLanguage: function (languageCode) {
+                return layoutController.setLanguage(languageCode).send();
             }
         };
         return service;

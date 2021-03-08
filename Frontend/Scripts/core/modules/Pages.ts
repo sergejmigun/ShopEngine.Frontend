@@ -1,31 +1,45 @@
 ﻿app.registerModule('Pages', [
+    'Promise',
     '$',
-    'Utils.objects', function ($: JQueryStatic, objects: Utils.IObjects) {
-    'use strict';
+    'Utils.objects',
+    'Shared.pageContext',
+    function (
+        promise: IPromise,
+        $: JQueryStatic,
+        objects: Utils.IObjects,
+        sharedPageContext: Shared.IPageContext) {
+        'use strict';
 
-    function initPage(component) {
-        var pageInit = component.init;
+        var onPageContrextInit;
 
-        component.init = function () {
-            $(document).ready(function () {
-                var $pageContextHidden = $('#pageContextHidden'),
-                    pageContext = objects.parseJson($pageContextHidden.val() as string);
+        sharedPageContext.context = promise.create(function (success) {
+            onPageContrextInit = success;
+        });
 
-                pageInit.call(component, pageContext);
-            });
-        };
-    }
+        function initPage(component) {
+            var pageInit = component.init;
 
-    return {
-        module: {
-            init: function (pageName) {
-                return this[pageName].init();
-            }
-        },
-        initComponent: function (component) {
-            initPage(component);
+            component.init = function () {
+                $(document).ready(function () {
+                    var $pageContextHidden = $('#pageContextHidden'),
+                        pageContext = objects.parseJson($pageContextHidden.val() as string);
 
-            return component;
+                    onPageContrextInit(pageContext);
+                    pageInit.call(component, pageContext);
+                });
+            };
         }
-    };
-}]);
+
+        return {
+            module: {
+                init: function (pageName) {
+                    return this[pageName].init();
+                }
+            },
+            initComponent: function (component) {
+                initPage(component);
+
+                return component;
+            }
+        };
+    }]);

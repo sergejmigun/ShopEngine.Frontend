@@ -208,7 +208,7 @@
     <Compile Include="Areas\Other\Models\ContextDataBaseViewModel.cs" />
     <Compile Include="Areas\Other\Models\ContextViewModel.cs" />
     <Compile Include="Areas\Other\Models\ScriptUrlsInfo.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Areas\Layout\MvcControllers\LayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -549,6 +549,7 @@
     <Content Include="fonts\socicon.woff" />
     <Content Include="Areas\Other\Views\Scripts\Context.cshtml" />
     <Content Include="Areas\Other\Views\web.config" />
+    <Content Include="Areas\Layout\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -584,9 +585,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Areas\Layout\Views\Layout\About.cshtml" />
+    <Content Include="Areas\Layout\Views\Layout\Contact.cshtml" />
+    <Content Include="Areas\Layout\Views\Layout\Index.cshtml" />
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Shared\CartPopup.cshtml" />
@@ -598,6 +599,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Cart\Models\" />
     <Folder Include="Areas\Features\Models\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
