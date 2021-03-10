@@ -16,7 +16,7 @@ namespace ShopEngine.Frontend
             routes.MapRoute(
                name: "Default",
                url: "{controller}/{action}/{id}",
-               defaults: new { controller = "Layout", action = "Index", id = UrlParameter.Optional }).DataTokens.Add("area", "Layout");
+               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }).DataTokens.Add("area", "Home");
         }
     }
 }

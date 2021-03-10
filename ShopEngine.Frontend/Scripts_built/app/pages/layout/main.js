@@ -6,9 +6,10 @@ app.registerComponent('Layout', 'Pages', [
     'Services.layoutService',
     'UI.shopCatalogue',
     'UI.layoutBar',
+    'UI.featuredProducts',
     function (promise, $, containerHelper, 
     //shopApp: Shared.IShopAppState,
-    layoutService, shopCatalogue, layoutBar) {
+    layoutService, shopCatalogue, layoutBar, featuredProducts) {
         'use strict';
         return {
             init: function (pageContext) {
@@ -51,13 +52,14 @@ app.registerComponent('Layout', 'Pages', [
                 //    setLanguage($img);
                 //});
                 //shopApp.state.language = $currentLanguageImg.attr('code');
+                featuredProducts.init(containerHelper.appendTo($('#featuredProducts'), promise.empty()), {});
                 //setCurrency();
                 layoutService.getCategoriesMenu().then(function (menu) {
                     shopCatalogue.init(containerHelper.appendTo($('#categoriesMenu'), promise.empty()), {
                         menu: menu
                     });
                 });
-                layoutBar.init(containerHelper.appendTo($('#layoutToolbar'), promise.empty()), pageContext.model.header);
+                layoutBar.init(containerHelper.replace($('#layoutToolbar'), promise.empty()), pageContext.model.header);
             }
         };
     }

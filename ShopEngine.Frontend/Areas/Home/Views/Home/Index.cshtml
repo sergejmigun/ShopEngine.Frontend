@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ShopEngine.Frontend.Models.Home.IndexViewModel
+
+<!-- Page Content-->
+<!-- Main Slider-->
+<section class="hero-slider" style="background-image: url(img/hero-slider/main-bg.jpg);">
+    <div class="owl-carousel large-controls dots-inside" data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 7000 }">
+        @foreach (var item in Model.SliderItems)
+        {
+            <div class="item">
+                <div class="container padding-top-3x">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                            <div class="from-bottom">
+                                <div class="h2 text-body mb-2 pt-1">@item.Title</div>
+                                <div class="h2 text-body mb-4 pb-1">@item.CustomText <span class="text-medium">@item.CustomTextPrice</span></div>
+                            </div><a class="btn btn-primary scale-up delay-1" href="@item.Link.Link">@item.Link.Text<i class="icon-arrow-right"></i></a>
+                        </div>
+                        <div class="col-md-6 padding-bottom-2x mb-3"><img class="d-block mx-auto" src="@item.Image" alt="@item.Title"></div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<section id="featuredProducts" class="container padding-bottom-2x mb-2"></section>
+
+<!-- Popular Brands Carousel-->
+<section class="bg-secondary padding-top-3x padding-bottom-3x">
+    <div class="container">
+        <h2 class="h3 text-center mb-30 pb-3">Popular Brands</h2>
+        <div class="owl-carousel" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: false, &quot;loop&quot;: true, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 4000, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:2}, &quot;470&quot;:{&quot;items&quot;:3},&quot;630&quot;:{&quot;items&quot;:4},&quot;991&quot;:{&quot;items&quot;:5},&quot;1200&quot;:{&quot;items&quot;:6}} }">
+        @foreach (var brand in Model.PopularBrands)
+        {
+            <img class="d-block w-110 opacity-75 m-auto" src="@brand.Source" alt="@brand.Alt">
+        }
+        </div>
+    </div>
+</section>
+

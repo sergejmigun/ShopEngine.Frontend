@@ -190,6 +190,7 @@
     <Compile Include="Areas\Cart\ApiControllers\CartController.cs" />
     <Compile Include="Areas\Cart\CartAreaRegistration.cs" />
     <Compile Include="Areas\Features\FeaturesAreaRegistration.cs" />
+    <Compile Include="Areas\Home\HomeAreaRegistration.cs" />
     <Compile Include="Areas\Layout\ApiControllers\LayoutController.cs" />
     <Compile Include="Areas\Features\ApiControllers\CompareListController.cs" />
     <Compile Include="Areas\Layout\ApiControllers\SearchController.cs" />
@@ -208,7 +209,7 @@
     <Compile Include="Areas\Other\Models\ContextDataBaseViewModel.cs" />
     <Compile Include="Areas\Other\Models\ContextViewModel.cs" />
     <Compile Include="Areas\Other\Models\ScriptUrlsInfo.cs" />
-    <Compile Include="Areas\Layout\MvcControllers\LayoutController.cs" />
+    <Compile Include="Areas\Home\MvcControllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -550,6 +551,7 @@
     <Content Include="Areas\Other\Views\Scripts\Context.cshtml" />
     <Content Include="Areas\Other\Views\web.config" />
     <Content Include="Areas\Layout\Views\web.config" />
+    <Content Include="Areas\Home\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -587,7 +589,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Layout\Views\Layout\About.cshtml" />
     <Content Include="Areas\Layout\Views\Layout\Contact.cshtml" />
-    <Content Include="Areas\Layout\Views\Layout\Index.cshtml" />
+    <Content Include="Areas\Home\Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Shared\CartPopup.cshtml" />
@@ -599,6 +601,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Cart\Models\" />
     <Folder Include="Areas\Features\Models\" />
+    <Folder Include="Areas\Home\ApiControllers\" />
+    <Folder Include="Areas\Home\Models\" />
+    <Folder Include="Areas\Layout\MvcControllers\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>

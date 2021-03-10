@@ -2,8 +2,8 @@
     'Services.apiControllers.layout.search',
     'Services.apiControllers.layout.layout',
     function (
-        searchController: Api.Layout.Controllers.ISearchController,
-        layoutController: Api.Layout.Controllers.ILayoutController) {
+        searchController: Api.Home.Controllers.ISearchController,
+        layoutController: Api.Home.Controllers.ILayoutController) {
         'use strict';
 
         var service: Layout.Services.ILayoutServicesService = {
