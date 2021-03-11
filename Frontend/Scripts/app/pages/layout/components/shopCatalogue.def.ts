@@ -15,7 +15,7 @@
     }
 
     export interface IShopCatalogueInitData {
-        menu: Api.Home.Models.ICategoriesMenu;
+        menu: Api.Layout.Models.ICategoriesMenu;
     }
 
     export interface IShopCatalogue {

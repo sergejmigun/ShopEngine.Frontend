@@ -48,6 +48,7 @@
     @Scripts.Render("~/bundles/custom")
     <script type="text/javascript">
         app.init();
+        app.Services.vueJsComponentInitializer.initUiComponents();
         app.Pages.init('Layout');
     </script>
 

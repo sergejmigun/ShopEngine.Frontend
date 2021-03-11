@@ -33,7 +33,7 @@
                     });
                 }
 
-                function getItems(subItems: Api.Home.Models.ICategoriesMenuItem[]) {
+                function getItems(subItems: Api.Layout.Models.ICategoriesMenuItem[]) {
                     if (!colections.hasItems(subItems)) {
                         return;
                     }
@@ -48,7 +48,7 @@
                     }).toArray();
                 }
 
-                function getVueData() {
+                function getViewModel() {
                     viewModel = {
                         items: getItems(initData.menu.topItems),
                         subItems1: [],
@@ -65,7 +65,7 @@
 
                 function init(template, success) {
                     var vm = new Vue({
-                        data: getVueData(),
+                        data: getViewModel(),
                         template: template,
                         methods: {
                             onItemHover: function (item) {

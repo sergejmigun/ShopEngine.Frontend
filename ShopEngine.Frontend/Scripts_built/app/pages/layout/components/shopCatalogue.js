@@ -37,7 +37,7 @@ app.registerComponent('shopCatalogue', 'UI', [
                         };
                     }).toArray();
                 }
-                function getVueData() {
+                function getViewModel() {
                     viewModel = {
                         items: getItems(initData.menu.topItems),
                         subItems1: [],
@@ -51,7 +51,7 @@ app.registerComponent('shopCatalogue', 'UI', [
                 }
                 function init(template, success) {
                     var vm = new Vue({
-                        data: getVueData(),
+                        data: getViewModel(),
                         template: template,
                         methods: {
                             onItemHover: function (item) {

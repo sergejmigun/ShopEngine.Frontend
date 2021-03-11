@@ -234,6 +234,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UI.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\UICore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UICore.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
@@ -626,7 +631,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UI.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\UICore.resx" />
+    <EmbeddedResource Include="Resources\UICore.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UICore.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopEngine.Frontend.Core\ShopEngine.Frontend.Core.csproj">

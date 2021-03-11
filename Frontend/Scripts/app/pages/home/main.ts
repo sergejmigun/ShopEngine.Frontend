@@ -30,8 +30,6 @@
                     });
                 });
                 layoutBar.init(containerHelper.replace($('#layoutToolbar'), promise.empty()), pageContext.model.header);
-                
-               
             }
         };
     }

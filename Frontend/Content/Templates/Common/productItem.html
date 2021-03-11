@@ -1,0 +1,27 @@
+﻿<div class="product-card mb-30">
+    <div v-if="isSale" class="product-badge bg-danger">Sale</div>
+    <div v-if="isOutOfStock" class="product-badge bg-secondary border-default text-body">Out of stock</div>
+    <a class="product-thumb" v-bind:href="productUrl"><img v-bind:src="imgUrl" alt="Product"></a>
+    <div class="product-card-body">
+        <div class="product-category">
+            <a href="#">{{categoryName}}</a>
+        </div>
+        <h3 class="product-title"><a v-bind:href="productUrl">{{title}}</a></h3>
+        <h4 class="product-price">
+            <del v-if="oldPriceStr">{{oldPriceStr}}</del>{{priceStr}}
+        </h4>
+    </div>
+    <div class="product-button-group">
+        <a class="product-button btn-wishlist" href="#" v-on:click="addToWishList()">
+            <i class="icon-heart"></i><span>Wishlist</span>
+        </a>
+        <a class="product-button btn-compare" href="#" v-on:click="compareProduct()">
+            <i class="icon-repeat"></i>
+            <span>Compare</span>
+        </a>
+        <a class="product-button" href="#" v-on:click="addToCart()">
+            <i class="icon-shopping-cart"></i>
+            <span>To Cart</span>
+        </a>
+    </div>
+</div>
