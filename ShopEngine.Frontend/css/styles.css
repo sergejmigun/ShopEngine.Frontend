@@ -422,11 +422,18 @@ figure figcaption {
 }
 
 /* Bootstrap Overrides */
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-    max-width: 1170px;
-  }
+@media (min-width: 1600px) {
+    .container {
+        width: 1570px;
+        max-width: 1570px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .container {
+        width: 1170px;
+        max-width: 1170px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -6938,12 +6945,14 @@ video {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   overflow: hidden;
+  text-align: center;
 }
 
-.product-card .product-thumb > img {
-  display: block;
-  width: 100%;
-}
+    .product-card .product-thumb > img {
+        display: inline-block;
+        max-width: 100%;
+        height: 140px;
+    }
 
 .product-card .product-category {
   width: 100%;
@@ -6961,11 +6970,13 @@ video {
   color: #0055ff;
 }
 
-.product-card .product-title {
-  margin-bottom: 18px;
-  font-size: 16px;
-  font-weight: normal;
-}
+    .product-card .product-title {
+        margin-bottom: 18px;
+        font-size: 16px;
+        font-weight: normal;
+        display: block;
+        height: 40px;
+    }
 
 .product-card .product-title > a {
   transition: color .3s;

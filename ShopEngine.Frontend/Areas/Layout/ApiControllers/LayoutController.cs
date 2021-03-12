@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using ShopEngine.Frontend.ApiModels;
+using ShopEngine.Frontend.Areas.Common.Models;
 using ShopEngine.Frontend.Areas.Layout.Models;
 
 namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
@@ -531,6 +532,240 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
         public void SetCurrency([FromBody]string currencyCode)
         {
             CurrentCurrencyCode = currencyCode;
+        }
+
+        [HttpGet]
+        public IEnumerable<FeaturedProductCategory> GetFeaturedProductCategories()
+        {
+            List<FeaturedProductCategory> cat = new List<FeaturedProductCategory>()
+            {
+                new FeaturedProductCategory
+                {
+                     CategoryName = "Останні переглянуті товари",
+                     ProductItems = new List<ProductItem>
+                     {
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Мобільний телефон Samsung Galaxy S20 FE",
+                               CategoryId = 1,
+                               CategoryName = "Mobile",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i2.rozetka.ua/goods/19989841/samsung_sm_g780fzwdsek_images_19989841236.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i2.rozetka.ua/goods/16302470/samsung_galaxy_note_10_lite_6_128_gb_red_sm_n770fzrdsek_images_16302470045.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/20300848/apple_iphone_12_pro_max_256gb_pacific_blue_images_20300848096.jpg",
+                               ProductUrl = "#"
+                         }
+                     }
+                },
+                new FeaturedProductCategory
+                {
+                    CategoryName = "Більше товарів для вибору",
+                     ProductItems = new List<ProductItem>
+                     {
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/17633585/mystery_mtv_3250fst2_images_17633585581.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Мобільний телефон Samsung Galaxy S20 FE",
+                               CategoryId = 1,
+                               CategoryName = "Mobile",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i2.rozetka.ua/goods/19989841/samsung_sm_g780fzwdsek_images_19989841236.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/17633585/mystery_mtv_3250fst2_images_17633585581.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i2.rozetka.ua/goods/16302470/samsung_galaxy_note_10_lite_6_128_gb_red_sm_n770fzrdsek_images_16302470045.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
+                               ProductUrl = "#"
+                         },
+                         new ProductItem
+                         {
+                               ProductTitle = "Телевізор Hisense 65U8QF",
+                               CategoryId = 1,
+                               CategoryName = "TV",
+                               IsOutOfStock = true,
+                               IsSale = true,
+                               OldPrice = 39999,
+                               OldPriceStr = "39999$",
+                               Price = 11,
+                               PriceStr = "11$",
+                               ProductId = 1,
+                               ProductImgUrl = "https://i8.rozetka.ua/goods/20300848/apple_iphone_12_pro_max_256gb_pacific_blue_images_20300848096.jpg",
+                               ProductUrl = "#"
+                         }
+                     }
+                }
+            };
+
+            return cat;
         }
     }
 }

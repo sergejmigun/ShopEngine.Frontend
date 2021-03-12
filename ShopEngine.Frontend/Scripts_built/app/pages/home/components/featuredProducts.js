@@ -1,41 +1,31 @@
 app.registerComponent('featuredProducts', 'UI', [
     'Promise',
     'Services.templatesHtmlProvider',
-    function (promise, templatesHtmlProvider) {
+    'Services.layoutService',
+    function (promise, templatesHtmlProvider, layoutService) {
         'use strict';
         return {
             init: function (container, initData) {
                 var $html = $('<div />');
                 var viewModel;
                 var control = {};
-                function getViewModel() {
+                function getViewModel(categories) {
                     viewModel = {
-                        featuredProductsCategoryName: 'Super',
-                        productItems: [{
-                                title: 'hello',
-                                isSale: true,
-                                isOutOfStock: false,
-                                productUrl: '',
-                                imgUrl: 'img/shop/products/02.jpg',
-                                categoryName: '',
-                                oldPriceStr: '',
-                                priceStr: '20$'
-                            }],
-                        itemIsReady: function (ctrl) {
-                            app.ignoreParams(ctrl);
-                        }
+                        featuredProductCategories: categories
                     };
                     return viewModel;
                 }
                 function init(template, success) {
-                    var vm = new Vue({
-                        data: getViewModel(),
-                        template: template,
-                        methods: {}
+                    layoutService.getFeaturedProducts().then(function (categories) {
+                        var vm = new Vue({
+                            data: getViewModel(categories),
+                            template: template,
+                            methods: {}
+                        });
+                        container.setContent($html);
+                        vm.$mount($html[0]);
+                        success(control);
                     });
-                    container.setContent($html);
-                    vm.$mount($html[0]);
-                    success(control);
                 }
                 return promise.create(function (success) {
                     templatesHtmlProvider.init('home').getHtml(['featuredProducts']).then(function (obj) {

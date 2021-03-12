@@ -17,6 +17,9 @@ app.registerComponent('layoutService', 'Services', [
             },
             setLanguage: function (languageCode) {
                 return layoutController.setLanguage(languageCode).send();
+            },
+            getFeaturedProducts: function () {
+                return layoutController.getFeaturedProductCategories().send();
             }
         };
         return service;

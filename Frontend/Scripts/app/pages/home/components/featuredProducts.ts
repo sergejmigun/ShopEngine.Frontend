@@ -1,8 +1,10 @@
 ﻿app.registerComponent('featuredProducts', 'UI', [
     'Promise',
     'Services.templatesHtmlProvider',
+    'Services.layoutService',
     function (promise: IPromise,
-        templatesHtmlProvider: Services.ITemplatesHtmlProviderFactory) {
+        templatesHtmlProvider: Services.ITemplatesHtmlProviderFactory,
+        layoutService: Layout.Services.ILayoutServicesService) {
         'use strict';
 
         return {
@@ -12,39 +14,28 @@
                 var control: UI.IFeaturedProducts = {
                 };
 
-                function getViewModel() {
+                function getViewModel(categories: Api.Layout.Models.IFeaturedProductCategory[]) {
                     viewModel = {
-                        featuredProductsCategoryName: 'Super',
-                        productItems: [{
-                            title: 'hello',
-                            isSale: true,
-                            isOutOfStock: false,
-                            productUrl: '',
-                            imgUrl: 'img/shop/products/02.jpg',
-                            categoryName: '',
-                            oldPriceStr: '',
-                            priceStr: '20$'
-                        }],
-                        itemIsReady: function (ctrl) {
-                            app.ignoreParams(ctrl);
-                        }
+                        featuredProductCategories: categories
                     };
 
                     return viewModel;
                 }
 
                 function init(template, success) {
-                    var vm = new Vue({
-                        data: getViewModel(),
-                        template: template,
-                        methods: {
-                        }
+                    layoutService.getFeaturedProducts().then(function (categories) {
+                        var vm = new Vue({
+                            data: getViewModel(categories),
+                            template: template,
+                            methods: {
+                            }
+                        });
+
+                        container.setContent($html);
+                        vm.$mount($html[0]);
+
+                        success(control);
                     });
-
-                    container.setContent($html);
-                    vm.$mount($html[0]);
-
-                    success(control);
                 }
 
                 return promise.create(function (success) {
