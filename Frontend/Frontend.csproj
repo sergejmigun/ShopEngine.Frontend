@@ -55,6 +55,10 @@
     <TypeScriptSourceRoot />
   </PropertyGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\common\components\productsView.def.ts">
+      <DependentUpon>productsView.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\common\components\productsView.ts" />
     <TypeScriptCompile Include="Scripts\app\common\services\cartModels.def.ts">
       <DependentUpon>cartService.ts</DependentUpon>
     </TypeScriptCompile>
@@ -96,6 +100,16 @@
       <DependentUpon>layoutService.ts</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\app\pages\layout\services\layoutService.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\browseByCategory.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\optionsFilter.def.ts">
+      <DependentUpon>optionsFilter.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\priceRangeFilter.def.ts">
+      <DependentUpon>priceRangeFilter.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\productsFilter.def.ts">
+      <DependentUpon>productsFilter.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\account.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\cart.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\registration.def.ts" />
@@ -109,16 +123,30 @@
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\categoriesMenuItem.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\featuredProductCategory.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\actionResult.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartItemModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartPopupModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\categoriesMenuItem.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\categoriesMenuViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\currencyModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\footerLinksGroup.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\footerViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\headerViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iView.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iViewEngine.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\javaScriptResult.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\keyValuePair.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\languageModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\linkViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\menuViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\productShortInfoModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\viewResult.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\home\controllers\home.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\controllers\scripts.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\baseViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\contextDataBaseViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\contextViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\controllers\browse.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\browseByCategoryViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\resources\UI.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\resources\UICore.def.ts" />
     <TypeScriptCompile Include="Scripts\core\common\pageContext.def.ts">
@@ -132,6 +160,19 @@
       <DependentUpon>shopApp.ts</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\app\shared\shopApp.ts" />
+    <Content Include="Content\Css\custom.css" />
+    <Content Include="Content\Css\font-awesome\all.css" />
+    <Content Include="Content\Css\styles.css" />
+    <Content Include="Content\Css\typeahead.css" />
+    <Content Include="Content\Css\vendor.min.css" />
+    <Content Include="Content\Css\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\Css\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\Css\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\fonts\feather.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\socicon.svg" />
+    <Content Include="Content\Templates\Shopping\optionsFilter.html" />
+    <Content Include="Content\Templates\Shopping\priceRangeFilter.html" />
     <Content Include="Content\Templates\Common\productItem.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -152,9 +193,33 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <TypeScriptCompile Include="Scripts\app\common\services\vueJsComponentInitializer.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\optionsFilter.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\priceRangeFilter.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\productsFilter.ts" />
     <Content Include="tsconfig.json" />
     <Content Include="Scripts\core\typings\vue\tsconfig.json" />
     <Content Include="Scripts\core\typings\vue\typings.json" />
+    <Content Include="Content\Css\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\Css\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\Css\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\Css\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\Css\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\Css\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\Css\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\Css\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\Css\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\Css\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\Css\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\Css\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\fonts\feather.eot" />
+    <Content Include="Content\fonts\feather.ttf" />
+    <Content Include="Content\fonts\feather.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\socicon.eot" />
+    <Content Include="Content\fonts\socicon.ttf" />
+    <Content Include="Content\fonts\socicon.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -492,6 +557,8 @@
     <Folder Include="Scripts\app\server\api\home\models\" />
     <Folder Include="Scripts\app\server\api\other\controllers\" />
     <Folder Include="Scripts\app\server\api\other\models\" />
+    <Folder Include="Scripts\app\server\api\shopping\controllers\" />
+    <Folder Include="Scripts\app\server\api\shopping\models\" />
     <Folder Include="Scripts\app\server\mvc\auth\controllers\" />
     <Folder Include="Scripts\app\server\mvc\auth\models\" />
     <Folder Include="Scripts\app\server\mvc\cart\controllers\" />
@@ -530,6 +597,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)Content" "$(ProjectDir)\..\ShopEngine.Frontend\Content" /e /y /i /r</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

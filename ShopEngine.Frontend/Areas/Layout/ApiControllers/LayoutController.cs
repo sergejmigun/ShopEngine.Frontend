@@ -22,29 +22,29 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                      {
                           IconUrl = "https://www.foxtrot.com.ua/src/images/icons/menu/32030_r.svg",
                           Title = "Smartphones",
-                          Url = "#",
+                          Url = Url.Route("Shopping_default", new { controller = "Browse", action = "Category", categoryId = 1  }),
                           SubItems = new List<CategoriesMenuItem>
                           {
                               new CategoriesMenuItem
                               {
                                    Title = "Apple",
-                                   Url =   "#",
+                                   Url =   Url.Route("Default", new { controller = "Category", action = "Browse", area = "Shopping", categoryId = 1  }),
                                    SubItems = new List<CategoriesMenuItem>
                                    {
                                        new CategoriesMenuItem
                                        {
                                             Title = "XS Max",
-                                            Url = "#"
+                                                Url = Url.Route("Default", new { controller = "Browse", action = "Category", area = "Shopping", categoryId = 1  }),
                                        },
                                        new CategoriesMenuItem
                                        {
                                             Title = "XS",
-                                            Url = "#"
+                                              Url = Url.Route("Default", new { controller = "Browse", action = "Category", area = "Shopping", categoryId = 1  }),
                                        },
                                        new CategoriesMenuItem
                                        {
                                             Title = "X",
-                                            Url = "#"
+                                               Url = Url.Route("Default", new { controller = "Browse", action = "Category", area = "Shopping", categoryId = 1  }),
                                        },
                                        new CategoriesMenuItem
                                        {
