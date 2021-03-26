@@ -1,21 +1,24 @@
 ﻿app.registerComponent('priceRangeFilter', 'UI', [
     'Promise',
-    'Utils.objects',
+    'Services.eventsInitializer',
     'Services.templatesHtmlProvider',
     function (promise: IPromise,
-        objects: Utils.IObjects,
+        eventsInitializer: Services.Initialization.IEventsInitializer,
         templatesHtmlProvider: Services.ITemplatesHtmlProviderFactory) {
         'use strict';
 
         return {
             init: function (container, initData) {
                 var $html = $('<div />');
+                var events = {
+                    onSubmit: eventsInitializer.initEvent<number, number>()
+                };
+
                 var control: UI.IPriceRangeFilter = {
+                    onSubmit: events.onSubmit.event
                 };
 
                 function init(template, success) {
-                    app.ignoreParams(objects);
-
                     var vm = new Vue({
                         data: {
                             rangeFrom: initData.rangeFrom,
@@ -23,6 +26,10 @@
                         },
                         template: template,
                         methods: {
+                            submit: function () {
+                                var self = this;
+                                events.onSubmit.invoke(self.$data.rangeFrom, self.$data.rangeTo);
+                            }
                         },
                         mounted: function () {
                             var self = this;

@@ -1,22 +1,31 @@
 app.registerComponent('priceRangeFilter', 'UI', [
     'Promise',
-    'Utils.objects',
+    'Services.eventsInitializer',
     'Services.templatesHtmlProvider',
-    function (promise, objects, templatesHtmlProvider) {
+    function (promise, eventsInitializer, templatesHtmlProvider) {
         'use strict';
         return {
             init: function (container, initData) {
                 var $html = $('<div />');
-                var control = {};
+                var events = {
+                    onSubmit: eventsInitializer.initEvent()
+                };
+                var control = {
+                    onSubmit: events.onSubmit.event
+                };
                 function init(template, success) {
-                    app.ignoreParams(objects);
                     var vm = new Vue({
                         data: {
                             rangeFrom: initData.rangeFrom,
                             rangeTo: initData.rangeTo
                         },
                         template: template,
-                        methods: {},
+                        methods: {
+                            submit: function () {
+                                var self = this;
+                                events.onSubmit.invoke(self.$data.rangeFrom, self.$data.rangeTo);
+                            }
+                        },
                         mounted: function () {
                             var self = this;
                             var $element = $(self.$el);

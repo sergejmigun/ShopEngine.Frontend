@@ -8,6 +8,7 @@
     }
 
     export interface IPriceRangeFilter {
+        onSubmit(handler: (rangeFrom: number, rangeTo: number) => void): void;
     }
 
     export interface IPriceRangeFilterFactory {

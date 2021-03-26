@@ -22,7 +22,46 @@
                     rangeTo: 25,
                     step: 1
                 });
-                optionsFilter.init(containerHelper.appendTo($('#optionsFilter'), promise.empty()), {});
+                optionsFilter.init(containerHelper.appendTo($('#optionsFilter'), promise.empty()), {
+                    categoryOptions: [{
+                        categoryName: 'Brands',
+                        categoryId: 1,
+                        options: [{
+                            id: 2,
+                            name: 'Apple',
+                            count: 23
+                        }, {
+                                id: 3,
+                                name: 'Samsung',
+                                count: 24
+                            }, {
+                                id: 4,
+                                name: 'Xiaomi',
+                                count: 25
+                            }]
+                    }, {
+                            categoryName: 'TVs',
+                            categoryId: 2,
+                            options: [{
+                                id: 2,
+                                name: 'LG',
+                                count: 23
+                            }, {
+                                id: 3,
+                                name: 'Qivi',
+                                count: 24
+                            }, {
+                                id: 4,
+                                name: 'Philips',
+                                count: 25
+                            }]
+                        }]
+                }).then(function (optionsFilter) {
+                    optionsFilter.onChange(function (data) {
+                        debugger
+                        app.ignoreParams(data);
+                    });
+                })
             }
         };
     }
