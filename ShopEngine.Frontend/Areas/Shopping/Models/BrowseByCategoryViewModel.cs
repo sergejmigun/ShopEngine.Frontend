@@ -10,6 +10,8 @@ namespace ShopEngine.Frontend.Areas.Shopping.Models
 
         public CategoryModel Category { get; set; }
 
+        public CategoryBanner CategoryBanner { get; set; }
+
         public IEnumerable<CategoryModel> SubCategories { get; set; }
 
         public PriceFilter PriceFilter { get; set; }

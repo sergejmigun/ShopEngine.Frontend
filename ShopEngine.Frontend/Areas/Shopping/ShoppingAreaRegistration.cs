@@ -16,8 +16,18 @@ namespace ShopEngine.Frontend.Areas.Shopping
         {
             context.MapRoute(
                 "Shopping_default",
-                "Shopping/{controller}/{action}/{categoryId}",
-                new { action = "Category", categoryId = UrlParameter.Optional });
+                "Shopping/{controller}/{action}/{id}",
+                new { action = "Category", id = UrlParameter.Optional });
+
+            context.MapRoute(
+                "Shopping_Cart",
+                "Cart",
+                new { action = "Index", controller = "Cart" });
+
+            context.MapRoute(
+               "Shopping_Checkout",
+               "Checkout",
+               new { action = "Index", controller = "Checkout" });
         }
     }
 }

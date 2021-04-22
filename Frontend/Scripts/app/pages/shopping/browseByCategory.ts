@@ -4,17 +4,20 @@
     'Services.containerHelper',
     'UI.priceRangeFilter',
     'UI.optionsFilter',
+    'UI.productsView',
     function (
         promise: IPromise,
         $: JQueryStatic,
         containerHelper: Services.IContainerHelper,
         priceRangeFilter: UI.IPriceRangeFilterFactory,
-        optionsFilter: UI.IOptionsFilterFactory) {
+        optionsFilter: UI.IOptionsFilterFactory,
+        productsView: UI.IProductsViewFactory) {
         'use strict';
 
         return {
             init: function (pageContext) {
                 app.ignoreParams(pageContext);
+
                 priceRangeFilter.init(containerHelper.appendTo($('#priceRange'), promise.empty()), {
                     min: 0,
                     max: 100,
@@ -22,6 +25,7 @@
                     rangeTo: 25,
                     step: 1
                 });
+
                 optionsFilter.init(containerHelper.appendTo($('#optionsFilter'), promise.empty()), {
                     categoryOptions: [{
                         categoryName: 'Brands',
@@ -31,37 +35,41 @@
                             name: 'Apple',
                             count: 23
                         }, {
-                                id: 3,
-                                name: 'Samsung',
-                                count: 24
-                            }, {
-                                id: 4,
-                                name: 'Xiaomi',
-                                count: 25
-                            }]
-                    }, {
-                            categoryName: 'TVs',
-                            categoryId: 2,
-                            options: [{
-                                id: 2,
-                                name: 'LG',
-                                count: 23
-                            }, {
-                                id: 3,
-                                name: 'Qivi',
-                                count: 24
-                            }, {
-                                id: 4,
-                                name: 'Philips',
-                                count: 25
-                            }]
+                            id: 3,
+                            name: 'Samsung',
+                            count: 24
+                        }, {
+                            id: 4,
+                            name: 'Xiaomi',
+                            count: 25
                         }]
-                }).then(function (optionsFilter) {
-                    optionsFilter.onChange(function (data) {
-                        debugger
-                        app.ignoreParams(data);
-                    });
+                    }, {
+                        categoryName: 'TVs',
+                        categoryId: 2,
+                        options: [{
+                            id: 2,
+                            name: 'LG',
+                            count: 23
+                        }, {
+                            id: 3,
+                            name: 'Qivi',
+                            count: 24
+                        }, {
+                            id: 4,
+                            name: 'Philips',
+                            count: 25
+                        }]
+                    }]
                 })
+                    .then(function (optionsFilter) {
+                        optionsFilter.onChange(function (data) {
+                            debugger
+                            app.ignoreParams(data);
+                        });
+                    });
+
+                productsView.init(containerHelper.appendTo($('#productsView'), promise.empty()), {
+                });
             }
         };
     }

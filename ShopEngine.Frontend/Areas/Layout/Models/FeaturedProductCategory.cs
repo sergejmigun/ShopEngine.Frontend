@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using ShopEngine.Frontend.Areas.Common.Models;
+using ShopEngine.Frontend.Areas.Shopping.Models;
 
 namespace ShopEngine.Frontend.Areas.Layout.Models
 {

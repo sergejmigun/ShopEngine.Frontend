@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using ShopEngine.Frontend.ApiModels;
-using ShopEngine.Frontend.Areas.Common.Models;
+using ShopEngine.Frontend.Areas.Shopping.Models;
 using ShopEngine.Frontend.Areas.Layout.Models;
 
 namespace ShopEngine.Frontend.Areas.Layout.ApiControllers

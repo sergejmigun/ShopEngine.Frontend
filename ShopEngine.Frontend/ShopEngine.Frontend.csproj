@@ -183,19 +183,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Auth\ApiControllers\RegistrationController.cs" />
-    <Compile Include="Areas\Auth\ApiControllers\AccountController.cs" />
-    <Compile Include="Areas\Auth\ApiControllers\AuthController.cs" />
-    <Compile Include="Areas\Auth\AuthAreaRegistration.cs" />
-    <Compile Include="Areas\Auth\Models\AccountDetails.cs" />
-    <Compile Include="Areas\Cart\ApiControllers\CartController.cs" />
-    <Compile Include="Areas\Cart\CartAreaRegistration.cs" />
-    <Compile Include="Areas\Common\LayoutHelper.cs" />
-    <Compile Include="Areas\Common\Models\ProductItem.cs" />
-    <Compile Include="Areas\Features\FeaturesAreaRegistration.cs" />
+    <Compile Include="Areas\Account\ApiControllers\RegistrationController.cs" />
+    <Compile Include="Areas\Account\ApiControllers\AccountController.cs" />
+    <Compile Include="Areas\Account\ApiControllers\AuthController.cs" />
+    <Compile Include="Areas\Account\AccountAreaRegistration.cs" />
+    <Compile Include="Areas\Account\Models\AccountDetails.cs" />
+    <Compile Include="Areas\Account\Models\Lists\CompareListViewModel.cs" />
+    <Compile Include="Areas\Account\Models\Lists\WishlistViewModel.cs" />
+    <Compile Include="Areas\Account\Models\Membership\PasswordResetViewModel.cs" />
+    <Compile Include="Areas\Account\Models\Membership\ProfileViewModel.cs" />
+    <Compile Include="Areas\Account\Models\Membership\RegistrationViewModel.cs" />
+    <Compile Include="Areas\Account\Models\Orders\OrdersViewModel.cs" />
+    <Compile Include="Areas\Account\Models\Tickets\TicketViewModel.cs" />
+    <Compile Include="Areas\Account\Models\Tickets\TicketsViewModel.cs" />
+    <Compile Include="Areas\Account\MvcController\OrdersController.cs" />
+    <Compile Include="Areas\Account\MvcController\MembershipController.cs" />
+    <Compile Include="Areas\Account\MvcController\TicketsController.cs" />
+    <Compile Include="Areas\Shopping\ApiControllers\CartController.cs" />
+    <Compile Include="Areas\Layout\LayoutHelper.cs" />
+    <Compile Include="Areas\Pages\Models\PageViewModel.cs" />
+    <Compile Include="Areas\Pages\PagesAreaRegistration.cs" />
+    <Compile Include="Areas\Shopping\Models\Cart\CartViewModel.cs" />
+    <Compile Include="Areas\Shopping\Models\Checkout\CheckoutViewModel.cs" />
+    <Compile Include="Areas\Shopping\Models\ProductItem.cs" />
     <Compile Include="Areas\Home\HomeAreaRegistration.cs" />
     <Compile Include="Areas\Layout\ApiControllers\LayoutController.cs" />
-    <Compile Include="Areas\Features\ApiControllers\CompareListController.cs" />
+    <Compile Include="Areas\Account\ApiControllers\CompareListController.cs" />
     <Compile Include="Areas\Layout\ApiControllers\SearchController.cs" />
     <Compile Include="ApiModels\SearchRequest.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -206,7 +219,7 @@
     <Compile Include="Areas\Layout\Models\CategoriesMenu.cs" />
     <Compile Include="Areas\Layout\Models\CategoriesMenuItem.cs" />
     <Compile Include="Areas\Layout\Models\FeaturedProductCategory.cs" />
-    <Compile Include="Areas\OtherAreaRegistration.cs" />
+    <Compile Include="Areas\Other\OtherAreaRegistration.cs" />
     <Compile Include="Areas\Other\Controllers\ScriptsController.cs" />
     <Compile Include="Areas\Other\Models\BaseViewModel.cs" />
     <Compile Include="Areas\Other\Models\ContextData.cs" />
@@ -214,13 +227,20 @@
     <Compile Include="Areas\Other\Models\ContextViewModel.cs" />
     <Compile Include="Areas\Other\Models\ScriptUrlsInfo.cs" />
     <Compile Include="Areas\Home\MvcControllers\HomeController.cs" />
+    <Compile Include="Areas\Pages\MvcControllers\IndexController.cs" />
     <Compile Include="Areas\Shopping\Models\BrandFilter.cs" />
     <Compile Include="Areas\Shopping\Models\BrowseByCategoryViewModel.cs" />
+    <Compile Include="Areas\Shopping\Models\CategoryBanner.cs" />
     <Compile Include="Areas\Shopping\Models\CategoryModel.cs" />
     <Compile Include="Areas\Shopping\Models\PriceFilter.cs" />
     <Compile Include="Areas\Shopping\Models\ProductSpecificationFilter.cs" />
     <Compile Include="Areas\Shopping\Models\ProductSpecificationFilterOption.cs" />
+    <Compile Include="Areas\Shopping\Models\ProductViewModel.cs" />
     <Compile Include="Areas\Shopping\MvcControllers\BrowseController.cs" />
+    <Compile Include="Areas\Account\MvcController\ListsController.cs" />
+    <Compile Include="Areas\Shopping\MvcControllers\CheckoutController.cs" />
+    <Compile Include="Areas\Shopping\MvcControllers\CartController.cs" />
+    <Compile Include="Areas\Shopping\MvcControllers\ProductController.cs" />
     <Compile Include="Areas\Shopping\ShoppingAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -597,6 +617,20 @@
     <Content Include="fonts\socicon.woff" />
     <Content Include="Areas\Shopping\Views\Browse\Category.cshtml" />
     <Content Include="Areas\Shopping\web.config" />
+    <Content Include="Areas\Shopping\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Pages\Views\Index\Index.cshtml" />
+    <Content Include="Areas\Pages\web.config" />
+    <Content Include="Areas\Shopping\Views\Checkout\Index.cshtml" />
+    <Content Include="Areas\Shopping\Views\Cart\Index.cshtml" />
+    <Content Include="Areas\Account\Views\web.config" />
+    <Content Include="Areas\Account\Views\Tickets\Browse.cshtml" />
+    <Content Include="Areas\Account\Views\Tickets\Item.cshtml" />
+    <Content Include="Areas\Account\Views\Orders\Index.cshtml" />
+    <Content Include="Areas\Account\Views\Lists\Wishlist.cshtml" />
+    <Content Include="Areas\Account\Views\Lists\CompareList.cshtml" />
+    <Content Include="Areas\Account\Views\Membership\Registration.cshtml" />
+    <Content Include="Areas\Account\Views\Membership\Profile.cshtml" />
+    <Content Include="Areas\Account\Views\Membership\PasswordReset.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -640,12 +674,11 @@
     <Content Include="Views\Shared\CartPopup.cshtml" />
     <Content Include="Views\Shared\MainMenu.cshtml" />
     <Content Include="Views\Shared\MobileMenu.cshtml" />
+    <Content Include="Wishlist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ApiControllers\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Cart\Models\" />
-    <Folder Include="Areas\Features\Models\" />
     <Folder Include="Areas\Home\ApiControllers\" />
     <Folder Include="Areas\Home\Models\" />
     <Folder Include="Areas\Layout\MvcControllers\" />

@@ -171,6 +171,9 @@
     <Content Include="Content\fonts\feather.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\socicon.svg" />
+    <Content Include="Content\Templates\Common\productsView.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Templates\Shopping\optionsFilter.html" />
     <Content Include="Content\Templates\Shopping\priceRangeFilter.html" />
     <Content Include="Content\Templates\Common\productItem.html">
@@ -322,7 +325,9 @@
     <TypeScriptCompile Include="Scripts\core\components\controls\modals.ts" />
     <TypeScriptCompile Include="Scripts\core\components\controls\notifier.def.ts" />
     <TypeScriptCompile Include="Scripts\core\components\controls\notifier.ts" />
-    <TypeScriptCompile Include="Scripts\core\components\controls\pagination.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\controls\pagination.def.ts">
+      <DependentUpon>pagination.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\core\components\controls\pagination.ts" />
     <TypeScriptCompile Include="Scripts\core\components\controls\pieChart.def.ts" />
     <TypeScriptCompile Include="Scripts\core\components\controls\pieChart.ts" />

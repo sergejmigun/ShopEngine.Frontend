@@ -3,6 +3,7 @@
     }
 
     export interface IProductsView {
+        onSubmit(handler: () => void): void;
     }
 
     export interface IProductsViewFactory {

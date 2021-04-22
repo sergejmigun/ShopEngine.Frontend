@@ -4,7 +4,8 @@ app.registerComponent('BrowseByCategory', 'Pages', [
     'Services.containerHelper',
     'UI.priceRangeFilter',
     'UI.optionsFilter',
-    function (promise, $, containerHelper, priceRangeFilter, optionsFilter) {
+    'UI.productsView',
+    function (promise, $, containerHelper, priceRangeFilter, optionsFilter, productsView) {
         'use strict';
         return {
             init: function (pageContext) {
@@ -50,12 +51,14 @@ app.registerComponent('BrowseByCategory', 'Pages', [
                                     count: 25
                                 }]
                         }]
-                }).then(function (optionsFilter) {
+                })
+                    .then(function (optionsFilter) {
                     optionsFilter.onChange(function (data) {
                         debugger;
                         app.ignoreParams(data);
                     });
                 });
+                productsView.init(containerHelper.appendTo($('#productsView'), promise.empty()), {});
             }
         };
     }

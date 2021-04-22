@@ -3523,26 +3523,25 @@ a.card {
   font-size: .8em;
 }
 
-.pagination {
-  display: table;
-  width: 100%;
-  border-top: 1px solid #e5e5e5;
+.pagination-wrapper {
+    display: table;
+    width: 100%;
 }
 
-.pagination > .column {
+.pagination-wrapper > .column {
   display: table-cell;
   padding-top: 16px;
   vertical-align: middle;
 }
 
-.pagination .pages {
+.pagination {
   display: block;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.pagination .pages > li {
+.pagination > li {
   display: inline-block;
   width: 36px;
   height: 36px;
@@ -3552,7 +3551,7 @@ a.card {
   text-align: center;
 }
 
-.pagination .pages > li > a {
+.pagination > li > a {
   display: block;
   width: 36px;
   height: 36px;
@@ -3564,12 +3563,12 @@ a.card {
   text-decoration: none;
 }
 
-.pagination .pages > li > a:hover {
+.pagination > li > a:hover {
   border-color: #e5e5e5;
   background-color: #f5f5f5;
 }
 
-.pagination .pages > li.active > a {
+.pagination > li.active > a {
   border-color: #0055ff;
   background-color: #0055ff;
   color: #ffffff;

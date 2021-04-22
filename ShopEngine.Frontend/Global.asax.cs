@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
 using System.Web.Compilation;
 using System.Web.Http;
@@ -46,6 +47,11 @@ namespace ShopEngine.Frontend
             var resolver = new CamelCasePropertyNamesContractResolver();
             resolver.NamingStrategy.ProcessDictionaryKeys = true;
             json.SerializerSettings.ContractResolver = resolver;
+        }
+
+        protected void Application_BeginRequest(Object sender, EventArgs e)
+        {
+            var r = RouteTable.Routes;
         }
     }
 }
