@@ -4,6 +4,10 @@ namespace ShopEngine.Frontend.Areas.Shopping
 {
     public class ShoppingAreaRegistration : AreaRegistration
     {
+        public const string DefaultRouteName = "Shopping_default";
+        public const string CartRouteName = "Shopping_Cart";
+        public const string CheckoutRouteName = "Shopping_Checkout";
+
         public override string AreaName
         {
             get
@@ -15,17 +19,17 @@ namespace ShopEngine.Frontend.Areas.Shopping
         public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "Shopping_default",
+                DefaultRouteName,
                 "Shopping/{controller}/{action}/{id}",
                 new { action = "Category", id = UrlParameter.Optional });
 
             context.MapRoute(
-                "Shopping_Cart",
+                CartRouteName,
                 "Cart",
                 new { action = "Index", controller = "Cart" });
 
             context.MapRoute(
-               "Shopping_Checkout",
+               CheckoutRouteName,
                "Checkout",
                new { action = "Index", controller = "Checkout" });
         }

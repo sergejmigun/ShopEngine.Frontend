@@ -3,6 +3,7 @@ using System.Web.Http;
 using ShopEngine.Frontend.ApiModels;
 using ShopEngine.Frontend.Areas.Shopping.Models;
 using ShopEngine.Frontend.Areas.Layout.Models;
+using ShopEngine.Frontend.Areas.Shopping.Common;
 
 namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
 {
@@ -22,7 +23,7 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                      {
                           IconUrl = "https://www.foxtrot.com.ua/src/images/icons/menu/32030_r.svg",
                           Title = "Smartphones",
-                          Url = Url.Route("Shopping_default", new { controller = "Browse", action = "Category", categoryId = 1  }),
+                          Url = Url.GetBrowseCategoryUrl(1),
                           SubItems = new List<CategoriesMenuItem>
                           {
                               new CategoriesMenuItem
@@ -557,7 +558,8 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                                PriceStr = "11$",
                                ProductId = 1,
                                ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
-                               ProductUrl = "#"
+                               ProductUrl =  Url.GetProductUrl(1),
+                               CategoryUrl = Url.GetBrowseCategoryUrl(1)
                          },
                          new ProductItem
                          {
@@ -572,7 +574,8 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                                PriceStr = "11$",
                                ProductId = 1,
                                ProductImgUrl = "https://i2.rozetka.ua/goods/19989841/samsung_sm_g780fzwdsek_images_19989841236.jpg",
-                               ProductUrl = "#"
+                               ProductUrl =  Url.GetProductUrl(1),
+                               CategoryUrl = Url.GetBrowseCategoryUrl(1)
                          },
                          new ProductItem
                          {
@@ -587,7 +590,8 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                                PriceStr = "11$",
                                ProductId = 1,
                                ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
-                               ProductUrl = "#"
+                               ProductUrl =  Url.GetProductUrl(1),
+                               CategoryUrl = Url.GetBrowseCategoryUrl(1)
                          },
                          new ProductItem
                          {
@@ -602,7 +606,8 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                                PriceStr = "11$",
                                ProductId = 1,
                                ProductImgUrl = "https://i2.rozetka.ua/goods/16302470/samsung_galaxy_note_10_lite_6_128_gb_red_sm_n770fzrdsek_images_16302470045.jpg",
-                               ProductUrl = "#"
+                               ProductUrl = "#",
+                               CategoryUrl = ""
                          },
                          new ProductItem
                          {
@@ -617,7 +622,8 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                                PriceStr = "11$",
                                ProductId = 1,
                                ProductImgUrl = "https://i8.rozetka.ua/goods/18996404/hisense_65u8qf_images_18996404071.jpg",
-                               ProductUrl = "#"
+                               ProductUrl = "#",
+                               CategoryUrl = ""
                          },
                          new ProductItem
                          {
@@ -632,7 +638,8 @@ namespace ShopEngine.Frontend.Areas.Layout.ApiControllers
                                PriceStr = "11$",
                                ProductId = 1,
                                ProductImgUrl = "https://i8.rozetka.ua/goods/20300848/apple_iphone_12_pro_max_256gb_pacific_blue_images_20300848096.jpg",
-                               ProductUrl = "#"
+                               ProductUrl = "#",
+                               CategoryUrl = ""
                          }
                      }
                 },

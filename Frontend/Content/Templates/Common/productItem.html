@@ -4,7 +4,7 @@
     <a class="product-thumb" v-bind:href="productUrl"><img v-bind:src="productImgUrl" alt="Product"></a>
     <div class="product-card-body">
         <div class="product-category">
-            <a href="#">{{categoryName}}</a>
+            <a v-bind:href="categoryUrl">{{categoryName}}</a>
         </div>
         <h3 class="product-title"><a v-bind:href="productUrl">{{productTitle}}</a></h3>
         <h4 class="product-price">

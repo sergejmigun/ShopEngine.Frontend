@@ -203,6 +203,7 @@
     <Compile Include="Areas\Layout\LayoutHelper.cs" />
     <Compile Include="Areas\Pages\Models\PageViewModel.cs" />
     <Compile Include="Areas\Pages\PagesAreaRegistration.cs" />
+    <Compile Include="Areas\Shopping\Common\ShoppingHelper.cs" />
     <Compile Include="Areas\Shopping\Models\Cart\CartViewModel.cs" />
     <Compile Include="Areas\Shopping\Models\Checkout\CheckoutViewModel.cs" />
     <Compile Include="Areas\Shopping\Models\ProductItem.cs" />
