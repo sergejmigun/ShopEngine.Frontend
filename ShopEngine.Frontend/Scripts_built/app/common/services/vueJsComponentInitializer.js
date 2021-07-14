@@ -10,7 +10,7 @@ app.registerComponent('vueJsComponentInitializer', 'Services', [
                         if (propName === 'renderItem') {
                             return;
                         }
-                        Vue.component('UI-' + propName, {
+                        Vue.component('ui' + propName.charAt(0).toUpperCase() + propName.slice(1), {
                             props: ['initData', 'onReady'],
                             data: function () {
                                 return {};

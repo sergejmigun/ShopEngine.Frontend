@@ -20,7 +20,7 @@
                 };
 
                 function getProductItems() {
-                    var items: Api.Common.Models.IProductItem[] = [];
+                    var items: Api.Shopping.Models.IProductItem[] = [];
 
                     items.push({
                         productId: 1,
@@ -34,7 +34,8 @@
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
 
                     items.push({
@@ -49,7 +50,8 @@
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
 
                     items.push({
@@ -64,7 +66,8 @@
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
 
                     items.push({
@@ -79,7 +82,8 @@
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
 
                     items.push({
@@ -94,7 +98,8 @@
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
 
                     return items;
@@ -123,7 +128,7 @@
                             }
                         }
                     });
-
+                    
                     container.setContent($html);
                     vm.$mount($html[0]);
                     success(control);

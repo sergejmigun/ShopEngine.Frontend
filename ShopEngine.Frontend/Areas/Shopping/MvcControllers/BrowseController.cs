@@ -30,6 +30,8 @@ namespace ShopEngine.Frontend.Areas.Shopping.MvcControllers
                  Name = "Mobile Phones"
             };
 
+            vm.SubTitle = vm.Category.Name;
+
             vm.SubCategories = new List<CategoryModel>
             {
                 new CategoryModel

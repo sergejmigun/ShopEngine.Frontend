@@ -11,28 +11,7 @@
 }
 
 <div>
-    <!-- Page Title-->
-    <div class="page-title">
-        <div class="container">
-            <div class="column">
-                <h1>@Model.Category.Name</h1>
-            </div>
-            <div class="column">
-                <ul class="breadcrumbs">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    @foreach (var item in Model.SiteMap.Where(x => x != Model.SiteMap.Last()))
-                    {
-                        <li class="separator">&nbsp;</li>
-                        <li><a href="@Url.Action(item.Link)">@item.Text</a></li>
-                    }
-                    <li class="separator">&nbsp;</li>
-                    <li>@Model.SiteMap.Last().Text</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    @Html.Partial("Sitemap", Model)
     <!-- Page Content-->
     <div class="container padding-bottom-3x mb-1">
         <div class="row">

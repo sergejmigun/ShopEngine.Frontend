@@ -27,7 +27,8 @@ app.registerComponent('productsView', 'UI', [
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
                     items.push({
                         productId: 1,
@@ -41,7 +42,8 @@ app.registerComponent('productsView', 'UI', [
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
                     items.push({
                         productId: 1,
@@ -55,7 +57,8 @@ app.registerComponent('productsView', 'UI', [
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
                     items.push({
                         productId: 1,
@@ -69,7 +72,8 @@ app.registerComponent('productsView', 'UI', [
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
                     items.push({
                         productId: 1,
@@ -83,7 +87,8 @@ app.registerComponent('productsView', 'UI', [
                         priceStr: '12$',
                         price: 12,
                         oldPriceStr: '12$',
-                        oldPrice: 13
+                        oldPrice: 13,
+                        categoryUrl: ''
                     });
                     return items;
                 }

@@ -1,0 +1,14 @@
+﻿.datetime-range-box-wrapper
+{
+    position: relative;
+}
+
+.datetime-range-box-wrapper i
+{
+    position: absolute;
+    bottom: 10px;
+    right: 24px;
+    top: auto;
+    cursor: pointer;
+}
+

@@ -37,6 +37,7 @@ namespace ShopEngine.Frontend.Areas.Other.Controllers
             sb.AppendLine(" var module = {};");
             sb.AppendLine(null);
             sb.AppendLine(this.GetResourceScriptObject(UI.ResourceManager, "UI"));
+            sb.AppendLine(this.GetResourceScriptObject(UICore.ResourceManager, "UICore"));
             sb.AppendLine(" return { module: module };");
             sb.AppendLine("}]);");
 

@@ -101,6 +101,10 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\app\pages\layout\services\layoutService.ts" />
     <TypeScriptCompile Include="Scripts\app\pages\shopping\browseByCategory.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\addToCart.def.ts">
+      <DependentUpon>addToCart.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\addToCart.ts" />
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\optionsFilter.def.ts">
       <DependentUpon>optionsFilter.ts</DependentUpon>
     </TypeScriptCompile>
@@ -110,11 +114,11 @@
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\productsFilter.def.ts">
       <DependentUpon>productsFilter.ts</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\product.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\account.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\cart.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\registration.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\cart\controllers\cart.def.ts" />
-    <TypeScriptCompile Include="Scripts\app\server\api\common\models\productItem.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\common\models\searchRequest.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\features\controllers\compareList.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\layout\controllers\layout.def.ts" />
@@ -122,6 +126,7 @@
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\categoriesMenu.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\categoriesMenuItem.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\featuredProductCategory.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\shopping\models\productItem.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\actionResult.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartItemModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartPopupModel.def.ts" />
@@ -131,6 +136,7 @@
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\footerLinksGroup.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\footerViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\headerViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\imageModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iView.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iViewEngine.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\javaScriptResult.def.ts" />
@@ -171,9 +177,137 @@
     <Content Include="Content\fonts\feather.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\socicon.svg" />
+    <Content Include="Content\libs\bootstrap.js" />
+    <Content Include="Content\libs\jquery-3.4.1.js" />
+    <Content Include="Content\libs\moment.js" />
+    <Content Include="Content\libs\promise-7.0.4.js" />
+    <Content Include="Content\plugins\asAccordion\asAccordion.css" />
+    <Content Include="Content\plugins\asAccordion\jquery-asAccordion.js" />
+    <Content Include="Content\plugins\bootstrap-chosen\bootstrap-chosen.css" />
+    <Content Include="Content\plugins\bootstrap-chosen\chosen-sprite%402x.png" />
+    <Content Include="Content\plugins\bootstrap-chosen\chosen-sprite.png" />
+    <Content Include="Content\plugins\bootstrap-chosen\chosen.jquery.js" />
+    <Content Include="Content\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
+    <Content Include="Content\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Content\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Content\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Content\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="Content\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Content\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="Content\plugins\bootstrap-daterangepicker\custom.css" />
+    <Content Include="Content\plugins\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Content\plugins\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Content\plugins\bootstrap-multiselect\css\bootstrap-multiselect.css" />
+    <Content Include="Content\plugins\bootstrap-multiselect\js\bootstrap-multiselect.js" />
+    <Content Include="Content\plugins\bootstrap-notify\bootstrap-notify.js" />
+    <Content Include="Content\plugins\bootstrap-slider\bootstrap-slider.css" />
+    <Content Include="Content\plugins\bootstrap-slider\bootstrap-slider.js" />
+    <Content Include="Content\plugins\bootstrap-slider\custom.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\css\star-rating.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\css\star-rating.min.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\img\loading.gif" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\ar.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\de.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\es.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\fa.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\fr.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\it.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\ko.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\LANG.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\pl.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\pt-BR.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\ro.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\ru.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\tr.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\ua.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\locales\zh.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\js\star-rating.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-fa\theme.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-fa\theme.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-fa\theme.min.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-fa\theme.min.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-svg\theme.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-svg\theme.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-svg\theme.min.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-svg\theme.min.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-uni\theme.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-uni\theme.js" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-uni\theme.min.css" />
+    <Content Include="Content\plugins\bootstrap-star-rating\themes\krajee-uni\theme.min.js" />
+    <Content Include="Content\plugins\bootstrap-touchspin\src\jquery.bootstrap-touchspin.css" />
+    <Content Include="Content\plugins\bootstrap-touchspin\src\jquery.bootstrap-touchspin.js" />
+    <Content Include="Content\plugins\bootstrap-typehead\typehead.js" />
+    <Content Include="Content\plugins\Chart-js\Chart.js" />
+    <Content Include="Content\plugins\Chart-js\extensions\Chart.HorizontalBar.js" />
+    <Content Include="Content\plugins\codemirror\codemirror.css" />
+    <Content Include="Content\plugins\codemirror\codemirror.js" />
+    <Content Include="Content\plugins\codemirror\css.js" />
+    <Content Include="Content\plugins\codemirror\custom.css" />
+    <Content Include="Content\plugins\codemirror\htmlmixed.js" />
+    <Content Include="Content\plugins\codemirror\javascript.js" />
+    <Content Include="Content\plugins\codemirror\xml.js" />
+    <Content Include="Content\plugins\cropper\cropper.css" />
+    <Content Include="Content\plugins\cropper\cropper.js" />
+    <Content Include="Content\plugins\datetimepicker\bootstrap-datetimepicker.css" />
+    <Content Include="Content\plugins\datetimepicker\datetimepicker.js" />
+    <Content Include="Content\plugins\fileuploader\11load-image.all.js" />
+    <Content Include="Content\plugins\fileuploader\1jquery.iframe-transport.js" />
+    <Content Include="Content\plugins\fileuploader\2jquery.fileupload.js" />
+    <Content Include="Content\plugins\fileuploader\3jquery.fileupload-process.js" />
+    <Content Include="Content\plugins\fileuploader\4jquery.fileupload-image.js" />
+    <Content Include="Content\plugins\fileuploader\5jquery.fileupload-audio.js" />
+    <Content Include="Content\plugins\fileuploader\6jquery.fileupload-video.js" />
+    <Content Include="Content\plugins\fileuploader\7jquery.fileupload-validate.js" />
+    <Content Include="Content\plugins\fileuploader\8jquery.fileupload-ui.js" />
+    <Content Include="Content\plugins\fileuploader\9jquery.ui.widget.js" />
+    <Content Include="Content\plugins\fileuploader\fileuploader_custom.css" />
+    <Content Include="Content\plugins\fileuploader\jquery.fileupload-noscript.css" />
+    <Content Include="Content\plugins\fileuploader\jquery.fileupload-ui-noscript.css" />
+    <Content Include="Content\plugins\fileuploader\jquery.fileupload-ui.css" />
+    <Content Include="Content\plugins\fileuploader\jquery.fileupload.css" />
+    <Content Include="Content\plugins\image-gallery\default-skin\default-skin.css" />
+    <Content Include="Content\plugins\image-gallery\default-skin\default-skin.png" />
+    <Content Include="Content\plugins\image-gallery\default-skin\default-skin.svg" />
+    <Content Include="Content\plugins\image-gallery\default-skin\preloader.gif" />
+    <Content Include="Content\plugins\image-gallery\photoswipe-ui-default.js" />
+    <Content Include="Content\plugins\image-gallery\photoswipe.css" />
+    <Content Include="Content\plugins\image-gallery\photoswipe.js" />
+    <Content Include="Content\plugins\inputs-list\custom.css" />
+    <Content Include="Content\plugins\jplayer\jquery.jplayer.js" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\css\custom.css" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\css\jplayer.blue.monday.css" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\image\jplayer.blue.monday.jpg" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\mustache1\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\mustache1\jplayer.blue.monday.audio.single.html" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\mustache1\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\mustache1\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="Content\plugins\jplayer\skin\blue.monday\mustache1\jplayer.blue.monday.video.single.html" />
+    <Content Include="Content\plugins\jqCloud\jqcloud.css" />
+    <Content Include="Content\plugins\jqCloud\jqcloud.js" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="Content\plugins\jquery.autosize\jquery.autosize.js" />
+    <Content Include="Content\plugins\jquery.deparam\deparam.js" />
+    <Content Include="Content\plugins\jquery.scroll.to\jquery.scrollTo.js" />
+    <Content Include="Content\plugins\jquery.sortable\jquery-sortable.js" />
+    <Content Include="Content\plugins\jquery.stickytableheaders\jquery.stickytableheaders.js" />
+    <Content Include="Content\plugins\jqueryinfinitescroll\jquery.infinitescroll.js" />
+    <Content Include="Content\plugins\masked input\jquery.maskedinput.js" />
+    <Content Include="Content\plugins\scrolltofixed\jquery-scrolltofixed.js" />
+    <Content Include="Content\plugins\select2\custom.css" />
+    <Content Include="Content\plugins\select2\select2.css" />
+    <Content Include="Content\plugins\select2\select2.full.js" />
+    <Content Include="Content\plugins\slick-carousel\ajax-loader.gif" />
+    <Content Include="Content\plugins\slick-carousel\fonts\slick.svg" />
+    <Content Include="Content\plugins\slick-carousel\slick-theme.css" />
+    <Content Include="Content\plugins\slick-carousel\slick.css" />
+    <Content Include="Content\plugins\slick-carousel\slick.js" />
     <Content Include="Content\Templates\Common\productsView.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Templates\Shopping\addToCart.html" />
     <Content Include="Content\Templates\Shopping\optionsFilter.html" />
     <Content Include="Content\Templates\Shopping\priceRangeFilter.html" />
     <Content Include="Content\Templates\Common\productItem.html">
@@ -223,6 +357,9 @@
     <Content Include="Content\fonts\socicon.eot" />
     <Content Include="Content\fonts\socicon.ttf" />
     <Content Include="Content\fonts\socicon.woff" />
+    <Content Include="Content\plugins\slick-carousel\fonts\slick.eot" />
+    <Content Include="Content\plugins\slick-carousel\fonts\slick.ttf" />
+    <Content Include="Content\plugins\slick-carousel\fonts\slick.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -401,7 +538,9 @@
     <TypeScriptCompile Include="Scripts\core\components\inputControls\multiLineTextBox.ts" />
     <TypeScriptCompile Include="Scripts\core\components\inputControls\multiSelectList.def.ts" />
     <TypeScriptCompile Include="Scripts\core\components\inputControls\multiSelectList.ts" />
-    <TypeScriptCompile Include="Scripts\core\components\inputControls\numericBox.def.ts" />
+    <TypeScriptCompile Include="Scripts\core\components\inputControls\numericBox.def.ts">
+      <DependentUpon>numericBox.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\core\components\inputControls\numericBox.ts" />
     <TypeScriptCompile Include="Scripts\core\components\inputControls\passwordBox.def.ts" />
     <TypeScriptCompile Include="Scripts\core\components\inputControls\passwordBox.ts" />
@@ -563,7 +702,6 @@
     <Folder Include="Scripts\app\server\api\other\controllers\" />
     <Folder Include="Scripts\app\server\api\other\models\" />
     <Folder Include="Scripts\app\server\api\shopping\controllers\" />
-    <Folder Include="Scripts\app\server\api\shopping\models\" />
     <Folder Include="Scripts\app\server\mvc\auth\controllers\" />
     <Folder Include="Scripts\app\server\mvc\auth\models\" />
     <Folder Include="Scripts\app\server\mvc\cart\controllers\" />

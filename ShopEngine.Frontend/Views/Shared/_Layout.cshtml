@@ -39,7 +39,11 @@
     <script src="/js/vendor.min.js"></script>
     <script src="/js/scripts.min.js"></script>
     <script type="text/javascript" src="/js/typeahead.bundle.min.js"></script>
+    
+    @Styles.Render("~/bundles/pluginsCss")
 
+    @Scripts.Render("~/bundles/libs")
+    @Scripts.Render("~/bundles/pluginsJs")
     @Scripts.Render("~/bundles/core")
 
     <script type="text/javascript" src="@Url.Action("Resources", "Scripts", new { Area = "Other" })"></script>

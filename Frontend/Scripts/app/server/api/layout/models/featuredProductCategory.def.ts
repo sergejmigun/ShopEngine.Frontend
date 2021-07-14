@@ -1,6 +1,6 @@
 namespace Api.Layout.Models {
     export interface IFeaturedProductCategory {
         categoryName: string;
-        productItems: Common.Models.IProductItem[];
+        productItems: Shopping.Models.IProductItem[];
     }
 }

@@ -26,13 +26,13 @@
     <!-- Products Grid-->
     <div class="row">
         <div class="col-md-4 col-sm-6" v-for="item in productItems">
-             <UI-productItem v-bind:init-data="item"></UI-productItem>
+            <ui-product-item v-bind:init-data="item"></ui-product-item>
         </div>
     </div>
     <!-- Pagination-->
     <nav class="pagination-wrapper">
         <div class="pagination-column">
-            <UI-pagination v-bind:init-data="pagination" v-bind:onReady="paginationReady"></UI-pagination>
+            <ui-pagination v-bind:init-data="pagination" v-bind:onReady="paginationReady"></ui-pagination>
         </div>
     </nav>
 </div>

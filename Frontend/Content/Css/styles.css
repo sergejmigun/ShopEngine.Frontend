@@ -1877,8 +1877,9 @@ select.form-control.form-control-sm:not([size]):not([multiple]) {
 }
 
 .input-group {
-  display: block;
-  position: relative;
+    position: relative;
+    display: table;
+    border-collapse: separate;
 }
 
 .input-group .input-group-addon,
@@ -1904,9 +1905,6 @@ select.form-control.form-control-sm:not([size]):not([multiple]) {
   color: #999999;
 }
 
-.input-group .form-control {
-  padding-left: 37px;
-}
 
 .input-group .form-control:focus ~ .input-group-addon {
   color: #0055ff;

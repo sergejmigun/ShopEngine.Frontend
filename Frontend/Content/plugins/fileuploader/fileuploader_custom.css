@@ -1,0 +1,23 @@
+﻿.uploader-filename {
+    margin-left: 10px;
+}
+
+.uploader-progress-bar {
+    position: relative;
+    height: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.uploader-progress-inner {
+    background-color: #5cb85c;
+    height: 5px;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+}
+
+.uploader-filelist {
+     margin-top: 5px;
+}

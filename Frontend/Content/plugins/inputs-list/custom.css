@@ -1,0 +1,20 @@
+﻿.inputs-filelist > .list-group-item {
+    position: relative;
+}
+
+
+
+.inputs-filelist > .list-group-item > button.remove {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    cursor: pointer;
+}
+
+.inputs-filelist > .list-group-item {
+    padding-right: 80px;
+}
+
+.inputs-filelist > .list-group-item > div {
+    width: 100%;
+}

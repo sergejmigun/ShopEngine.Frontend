@@ -1877,8 +1877,9 @@ select.form-control.form-control-sm:not([size]):not([multiple]) {
 }
 
 .input-group {
-  display: block;
-  position: relative;
+    position: relative;
+    display: table;
+    border-collapse: separate;
 }
 
 .input-group .input-group-addon,

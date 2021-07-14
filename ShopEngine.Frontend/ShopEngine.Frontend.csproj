@@ -247,6 +247,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Common\ImageModel.cs" />
+    <Compile Include="Models\Common\InnerContainerViewModel.cs" />
     <Compile Include="Models\Common\LinkViewModel.cs" />
     <Compile Include="Models\Common\ProductShortInfoModel.cs" />
     <Compile Include="Models\Home\IndexViewModel.cs" />
@@ -676,6 +677,7 @@
     <Content Include="Views\Shared\MainMenu.cshtml" />
     <Content Include="Views\Shared\MobileMenu.cshtml" />
     <Content Include="Wishlist.cshtml" />
+    <Content Include="Views\Shared\Sitemap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ApiControllers\" />

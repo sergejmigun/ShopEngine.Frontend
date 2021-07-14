@@ -4,10 +4,8 @@ using ShopEngine.Frontend.Models.Layout;
 
 namespace ShopEngine.Frontend.Areas.Shopping.Models
 {
-    public class BrowseByCategoryViewModel: LayoutViewModel
+    public class BrowseByCategoryViewModel: InnerContainerViewModel
     {
-        public IEnumerable<LinkViewModel> SiteMap { get; set; }
-
         public CategoryModel Category { get; set; }
 
         public CategoryBanner CategoryBanner { get; set; }

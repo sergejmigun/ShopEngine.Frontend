@@ -4,6 +4,8 @@
     {
         public string Source { get; set; }
 
+        public string Thumb { get; set; }
+
         public string Alt { get; set; }
 
         public LinkViewModel Link { get; set; }

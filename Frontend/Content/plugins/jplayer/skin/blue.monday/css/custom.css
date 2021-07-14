@@ -1,0 +1,20 @@
+﻿.audio-player-playlist .jp-volume-controls {
+    left: 367px;
+}
+
+.audio-player-playlist .jp-audio .jp-type-single .jp-progress {
+    left: 168px;
+}
+
+.audio-player-playlist .jp-audio .jp-type-single .jp-time-holder {
+    left: 168px;
+}
+
+.audio-player-playlist .jp-audio {
+    width: 478px;
+}
+
+.video-player-playlist .jp-video .jp-type-single .jp-controls {
+    width: 139px;
+    margin-left: 175px;
+}

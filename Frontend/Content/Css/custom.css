@@ -2,6 +2,10 @@
     list-style: none;
 }
 
+.display-none{
+    display: none;
+}
+
 
 .site-header {
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
