@@ -236,6 +236,7 @@
     <Compile Include="Areas\Shopping\Models\PriceFilter.cs" />
     <Compile Include="Areas\Shopping\Models\ProductSpecificationFilter.cs" />
     <Compile Include="Areas\Shopping\Models\ProductSpecificationFilterOption.cs" />
+    <Compile Include="Areas\Shopping\Models\ProductSpecificationItem.cs" />
     <Compile Include="Areas\Shopping\Models\ProductViewModel.cs" />
     <Compile Include="Areas\Shopping\MvcControllers\BrowseController.cs" />
     <Compile Include="Areas\Account\MvcController\ListsController.cs" />

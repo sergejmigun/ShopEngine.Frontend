@@ -34,7 +34,6 @@ app.registerComponent('addToCart', 'UI', [
                                 action: function () {
                                     var val = quantityInput.value();
                                     app.ignoreParams(val);
-                                    debugger;
                                 }
                             }, containerHelper.replace($element.find('.addToCartBtn'), promise.empty()));
                         }

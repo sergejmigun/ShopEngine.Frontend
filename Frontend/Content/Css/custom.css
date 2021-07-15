@@ -110,3 +110,32 @@
             .header-links > ul a:hover {
                 color: #05f;
             }
+
+
+.characteristics-full-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.characteristics-full-label {
+    position: relative;
+    align-self: flex-start;
+    width: 40%;
+}
+
+    .characteristics-full-label:before {
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+        width: 100%;
+        border-bottom: 1px dotted #d2d2d2;
+        content: "";
+    }
+
+.characteristics-full-value {
+    width: 60%;
+    padding-left: 16px;
+    box-sizing: border-box;
+}

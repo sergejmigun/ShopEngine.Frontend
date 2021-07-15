@@ -43,7 +43,6 @@
                                     var val = quantityInput.value();
 
                                     app.ignoreParams(val);
-                                    debugger
                                 }
                             }, containerHelper.replace($element.find('.addToCartBtn'), promise.empty()))
                         }

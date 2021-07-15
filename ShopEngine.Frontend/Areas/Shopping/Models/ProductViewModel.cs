@@ -18,5 +18,9 @@ namespace ShopEngine.Frontend.Areas.Shopping.Models
         public decimal Price { get; set; }
 
         public decimal? OldPrice { get; set; }
+
+        public List<ProductSpecificationItem> Specifications { get; set; }
+
+        public List<ProductItem> RelatedProducts { get; set; }
     }
 }
