@@ -19,14 +19,15 @@
 
                 function initModel(comparedItemsCount, cart: Common.ICart, template) {
                     var model: UI.ILayoutBarModel = {
-                        cartItemsCount: cart.cartItems.length,
+                        cartItemsCount: cart.items.length,
                         comparedItemsCount: comparedItemsCount,
                         languages: initData.languages,
                         currencies: initData.currencies,
                         currentLanguage: initData.currentLanguage,
                         currentCurrency: initData.currentCurrency,
                         cart: cart,
-                        isLoggedIn: initData.isLoggedIn
+                        isLoggedIn: initData.isLoggedIn,
+                        pageUrl: cartService.getCartPageUrl()
                     };
 
                     var vm = new Vue({

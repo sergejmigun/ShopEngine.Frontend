@@ -105,6 +105,9 @@
       <DependentUpon>addToCart.ts</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\addToCart.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\cart.def.ts">
+      <DependentUpon>cart.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\optionsFilter.def.ts">
       <DependentUpon>optionsFilter.ts</DependentUpon>
     </TypeScriptCompile>
@@ -114,7 +117,12 @@
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\productsFilter.def.ts">
       <DependentUpon>productsFilter.ts</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\cart.ts" />
     <TypeScriptCompile Include="Scripts\app\pages\shopping\product.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\account\controllers\account.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\account\controllers\cart.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\account\controllers\compareList.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\account\controllers\registration.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\account.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\cart.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\auth\controllers\registration.def.ts" />
@@ -126,7 +134,22 @@
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\categoriesMenu.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\categoriesMenuItem.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\layout\models\featuredProductCategory.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\shopping\controllers\cart.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\shopping\models\cartItem.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\api\shopping\models\cartModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\api\shopping\models\productItem.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\controllers\lists.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\controllers\membership.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\controllers\orders.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\controllers\tickets.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\compareListViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\ordersViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\passwordResetViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\profileViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\registrationViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\ticketsViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\ticketViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\account\models\wishlistViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\actionResult.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartItemModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\cartPopupModel.def.ts" />
@@ -137,24 +160,53 @@
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\footerViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\headerViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\imageModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\indexViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iView.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\iViewEngine.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\javaScriptResult.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\keyValuePair.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\languageModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\layoutViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\linkViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\menuViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\productShortInfoModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\sliderItemModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\common\models\viewResult.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\home\controllers\home.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\controllers\scripts.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\baseViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\contextDataBaseViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\other\models\contextViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\pages\controllers\index.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\pages\models\pageViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\controllers\browse.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\controllers\cart.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\controllers\checkout.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\controllers\product.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\brandFilter.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\browseByCategoryViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\cartViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\categoryBanner.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\categoryModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\checkoutViewModel.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\priceFilter.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\productSpecificationFilter.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\productSpecificationFilterOption.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\server\mvc\shopping\models\productViewModel.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\resources\UI.def.ts" />
     <TypeScriptCompile Include="Scripts\app\server\resources\UICore.def.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\globalConfiguration.def.ts">
+      <DependentUpon>globalConfiguration.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\services\helpers\currencyHelper.def.ts">
+      <DependentUpon>currencyHelper.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\services\helpers\productsFilterConditionsHelper.def.ts">
+      <DependentUpon>productsFilterConditionsHelper.ts</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\services\templatesHtmlProvider.def.ts">
+      <DependentUpon>templatesHtmlProvider.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\core\common\pageContext.def.ts">
       <DependentUpon>pageContext.ts</DependentUpon>
     </TypeScriptCompile>
@@ -308,6 +360,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Templates\Shopping\addToCart.html" />
+    <Content Include="Content\Templates\Shopping\cart.html" />
     <Content Include="Content\Templates\Shopping\optionsFilter.html" />
     <Content Include="Content\Templates\Shopping\priceRangeFilter.html" />
     <Content Include="Content\Templates\Common\productItem.html">
@@ -333,6 +386,7 @@
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\optionsFilter.ts" />
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\priceRangeFilter.ts" />
     <TypeScriptCompile Include="Scripts\app\pages\shopping\components\productsFilter.ts" />
+    <TypeScriptCompile Include="Scripts\app\pages\shopping\components\cart.ts" />
     <Content Include="tsconfig.json" />
     <Content Include="Scripts\core\typings\vue\tsconfig.json" />
     <Content Include="Scripts\core\typings\vue\typings.json" />
@@ -392,13 +446,9 @@
     <TypeScriptCompile Include="Scripts\app\services\controlHelpers\imageUploaderHelper.ts" />
     <TypeScriptCompile Include="Scripts\app\services\controlHelpers\selectListValuesCompleterHelper.def.ts" />
     <TypeScriptCompile Include="Scripts\app\services\controlHelpers\selectListValuesCompleterHelper.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\globalConfiguration.def.ts" />
     <TypeScriptCompile Include="Scripts\app\services\globalConfiguration.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\helpers\currencyHelper.def.ts" />
     <TypeScriptCompile Include="Scripts\app\services\helpers\currencyHelper.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\helpers\productsFilterConditionsHelper.def.ts" />
     <TypeScriptCompile Include="Scripts\app\services\helpers\productsFilterConditionsHelper.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\templatesHtmlProvider.def.ts" />
     <TypeScriptCompile Include="Scripts\app\services\templatesHtmlProvider.ts" />
     <TypeScriptCompile Include="Scripts\core\app.ts" />
     <TypeScriptCompile Include="Scripts\core\common\textValue.def.ts" />
@@ -694,18 +744,22 @@
     <Folder Include="Properties\" />
     <Folder Include="Scripts\app\pages\home\services\" />
     <Folder Include="Scripts\app\pages\layout\partials\" />
+    <Folder Include="Scripts\app\server\api\account\models\" />
     <Folder Include="Scripts\app\server\api\auth\models\" />
     <Folder Include="Scripts\app\server\api\cart\models\" />
+    <Folder Include="Scripts\app\server\api\common\controllers\" />
     <Folder Include="Scripts\app\server\api\features\models\" />
     <Folder Include="Scripts\app\server\api\home\controllers\" />
     <Folder Include="Scripts\app\server\api\home\models\" />
     <Folder Include="Scripts\app\server\api\other\controllers\" />
     <Folder Include="Scripts\app\server\api\other\models\" />
-    <Folder Include="Scripts\app\server\api\shopping\controllers\" />
+    <Folder Include="Scripts\app\server\api\pages\controllers\" />
+    <Folder Include="Scripts\app\server\api\pages\models\" />
     <Folder Include="Scripts\app\server\mvc\auth\controllers\" />
     <Folder Include="Scripts\app\server\mvc\auth\models\" />
     <Folder Include="Scripts\app\server\mvc\cart\controllers\" />
     <Folder Include="Scripts\app\server\mvc\cart\models\" />
+    <Folder Include="Scripts\app\server\mvc\common\controllers\" />
     <Folder Include="Scripts\app\server\mvc\features\controllers\" />
     <Folder Include="Scripts\app\server\mvc\features\models\" />
     <Folder Include="Scripts\app\server\mvc\home\models\" />

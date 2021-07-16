@@ -8,6 +8,7 @@
         currentCurrency: Common.ICurrency;
         cart: Common.ICart;
         isLoggedIn: boolean;
+        pageUrl: string;
     }
 
     export interface ILayoutBarInitData {

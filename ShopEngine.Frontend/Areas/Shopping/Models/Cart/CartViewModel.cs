@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using ShopEngine.Frontend.Models.Layout;
+﻿using System.Collections.Generic;
+using ShopEngine.Frontend.Models.Common;
 
 namespace ShopEngine.Frontend.Areas.Shopping.Models.Cart
 {
-    public class CartViewModel : LayoutViewModel
+    public class CartViewModel : InnerContainerViewModel
     {
+        public List<ProductItem> RelatedProducts { get; set; }
     }
 }

@@ -5,5 +5,6 @@
         updateCount(productId: number, count: number): Promise<any>;
         getCart(): Promise<Common.ICart>;
         onChange(handler: (cart: Common.ICart) => void): void;
+        getCartPageUrl(): string;
     }
 }

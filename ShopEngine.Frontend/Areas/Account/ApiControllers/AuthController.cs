@@ -3,7 +3,7 @@ using ShopEngine.Frontend.ApiModels;
 
 namespace ShopEngine.Frontend.Areas.Account.ApiControllers
 {
-    public class CartController : ApiController
+    public class AuthController : ApiController
     {
         [HttpPost]
         public object SignIn(int productId)
