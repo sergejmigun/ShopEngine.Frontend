@@ -4,6 +4,7 @@
             <div><i class="icon-menu"></i><span class="text-label">Menu</span></div>
         </a>
     </div>
+    
     <div class="toolbar-item hidden-on-mobile">
         <a href="#">
             <div>
@@ -51,11 +52,11 @@
     </div>
     <div class="toolbar-item">
         <a v-bind:href="pageUrl">
-            <div><span class="cart-icon"><i class="icon-shopping-cart"></i><span class="count-label">{{cart.cartItems.length}}</span></span><span class="text-label">Cart</span></div>
+            <div><span class="cart-icon"><i class="icon-shopping-cart"></i><span class="count-label">{{cart.items.length}}</span></span><span class="text-label">Cart</span></div>
         </a>
         <div class="toolbar-dropdown cart-dropdown widget-cart hidden-on-mobile">
             <!-- Entry-->
-            <div class="entry" v-for="item in cart.cartItems">
+            <div class="entry" v-for="item in cart.items">
                 <div class="entry-thumb"><a href="shop-single.html"><img v-bind:src="'img/' + item.product.thumb" v-bind:alt="item.product.title"></a></div>
                 <div class="entry-content">
                     <h4 class="entry-title"><a href="shop-single.html">{{item.product.title}}</a></h4><span class="entry-meta">{{item.productsCount}} x {{item.product.priceStr}}</span>
@@ -70,5 +71,5 @@
                 <div class="pl-2 w-50"><a class="btn btn-primary btn-sm btn-block mb-0" href="checkout.html">Checkout</a></div>
             </div>
         </div>
-    </div>
+    </div> 
 </div>

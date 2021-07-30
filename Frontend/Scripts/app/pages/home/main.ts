@@ -22,6 +22,7 @@
 
         return {
             init: function (pageContext) {
+                debugger
                 searchBar.init(containerHelper.appendTo($('#searchBarWrapper'), promise.empty()), {});
                 featuredProducts.init(containerHelper.appendTo($('#featuredProducts'), promise.empty()), {});
                 layoutService.getCategoriesMenu().then(function (menu) {
